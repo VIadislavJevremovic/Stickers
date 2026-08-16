@@ -170,6 +170,13 @@
       aria-label={openItem.name || 'Sticker ' + openItem.id}
       transition:scale={{ duration: 140, start: 0.94 }}
     >
+      <button
+        class="override"
+        on:click={() => setCount(openItem.id, 0)}
+        disabled={openCount === 0}
+        aria-label="Revert to not owned"
+        title="Revert to not owned"
+      >↺</button>
       <button class="close" on:click={closeModal} aria-label="Close">✕</button>
 
       <div class="mtag {stateClass(openCount)}">{openItem.id}</div>
@@ -181,19 +188,10 @@
         {:else}{openCount - 1} spare{openCount - 1 === 1 ? '' : 's'}{/if}
       </p>
 
-      <div class="mcontrols">
-        <button
-          class="override"
-          on:click={() => setCount(openItem.id, 0)}
-          disabled={openCount === 0}
-          aria-label="Mark as not owned"
-          title="Mark as not owned"
-        >🗑</button>
-        <div class="stepper big">
-          <button on:click={() => adjust(openItem.id, -1)} disabled={openCount <= 1} aria-label="Remove one spare">−</button>
-          <span class="n">{openCount}</span>
-          <button on:click={() => adjust(openItem.id, +1)} aria-label="Add one">+</button>
-        </div>
+      <div class="stepper big">
+        <button on:click={() => adjust(openItem.id, -1)} disabled={openCount <= 1} aria-label="Remove one spare">−</button>
+        <span class="n">{openCount}</span>
+        <button on:click={() => adjust(openItem.id, +1)} aria-label="Add one">+</button>
       </div>
     </div>
   </div>
@@ -298,11 +296,10 @@
   .mstate.spare { color: var(--spare); }
   .mstate.miss { color: var(--miss); }
 
-  .mcontrols { display: flex; align-items: center; justify-content: center; gap: 12px; }
   .override {
-    width: 50px; height: 50px; flex: none;
-    border: 1px solid var(--border); border-radius: 10px;
-    background: var(--surface); color: var(--miss); font-size: 20px; line-height: 1;
+    position: absolute; top: 10px; left: 10px;
+    width: 32px; height: 32px; border: 0; border-radius: 8px;
+    background: transparent; color: var(--miss); font-size: 19px; line-height: 1;
   }
   .override:disabled { color: #c3ccd5; }
   @media (prefers-reduced-motion: no-preference) {
