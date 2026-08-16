@@ -87,6 +87,11 @@
     return 'have';
   }
 
+  // Split a sticker id into its team code and number: ALG1 -> ALG / 1,
+  // CC-11 -> CC / 11, FWC7 -> FWC / 7, 00 -> '' / 00.
+  const codeOf = (id) => (String(id).match(/^[A-Z]+/) || [''])[0];
+  const numOf = (id) => String(id).slice(codeOf(id).length).replace(/^-/, '');
+
   function closeModal() {
     openId = null;
   }
@@ -131,7 +136,7 @@
   {#each groups as [name, items] (name)}
     <section class="setblock">
       <header class="sethead">
-        <h2>{name}</h2>
+        <h2>{name === 'Special' ? name : `${codeOf(items[0].id)} (${name})`}</h2>
         {#if setStats.get(name)}
           <span class="setcount">{setStats.get(name).have}/{setStats.get(name).total}</span>
         {/if}
@@ -143,7 +148,12 @@
             on:click={() => (openId = s.id)}
             title={s.name || 'Sticker ' + s.id}
           >
-            <span class="cid">{s.id}</span>
+            {#if s.set === 'Special' || !codeOf(s.id)}
+              <span class="cid">{s.id}</span>
+            {:else}
+              <span class="ccode">{codeOf(s.id)}</span>
+              <span class="cnum">{numOf(s.id)}</span>
+            {/if}
             {#if s.count >= 2}<span class="dupe">+{s.count - 1}</span>{/if}
           </button>
         {/each}
@@ -247,6 +257,11 @@
     padding: 2px;
   }
   .cid { font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; }
+  .ccode {
+    position: absolute; top: 5px; left: 7px;
+    font-size: 10px; font-weight: 700; letter-spacing: 0.02em; opacity: 0.8;
+  }
+  .cnum { font-size: 21px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .cell.have { background: var(--have); border-color: var(--have); color: #fff; }
   .cell.spare { background: var(--spare); border-color: var(--spare); color: #fff; }
   .cell.miss { background: var(--surface-2); border: 1px dashed var(--miss); color: var(--miss); }

@@ -15,6 +15,7 @@
     a.download = `stickers-${new Date().toISOString().slice(0, 10)}.json`;
     a.click();
     URL.revokeObjectURL(url);
+    open = false; // dismiss the Backup menu after exporting
   }
 
   async function onFile(e) {
@@ -24,11 +25,13 @@
     const text = await file.text();
     const result = parseImport(text);
     if (!result.ok) {
-      msg = result.error;
-    } else if (confirm('Replace your current collection with the imported one?')) {
-      collection.set(result.collection);
+      msg = result.error; // keep the menu open so the error is visible
+    } else {
+      if (confirm('Replace your current collection with the imported one?')) {
+        collection.set(result.collection);
+      }
       msg = '';
-      open = false; // dismiss the Backup menu on a successful import
+      open = false; // dismiss the Backup menu whether confirmed or cancelled
     }
     fileInput.value = '';
   }
