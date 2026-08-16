@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { catalog, loadCatalog, collection, session } from './lib/stores.js';
+  import { catalog, loadCatalog, session } from './lib/stores.js';
   import { storageWorks } from './lib/persist.js';
   import CollectionView from './components/CollectionView.svelte';
   import SwapView from './components/SwapView.svelte';
