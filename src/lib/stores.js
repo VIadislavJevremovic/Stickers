@@ -30,10 +30,15 @@ export function setCount(id, count) {
 }
 
 // Nudge a count up or down. Used by the +/- steppers everywhere.
+// Once you own a sticker it's stuck in the album, so an owned count never
+// drops below 1 — only spares (count - 1) can be removed. A sticker you
+// don't own (count 0) still stays at 0 when nudged down.
 export function adjust(id, delta) {
   collection.update((c) => {
     const next = { ...c };
-    const v = (next[id] || 0) + delta;
+    const cur = next[id] || 0;
+    let v = cur + delta;
+    if (cur >= 1 && v < 1) v = 1; // protect the album copy
     if (v <= 0) delete next[id];
     else next[id] = v;
     return next;
@@ -84,9 +89,9 @@ export function commitSession() {
     collection.update((c) => {
       const next = { ...c };
       for (const [id, qty] of Object.entries(s.outgoing)) {
-        const v = (next[id] || 0) - qty;
-        if (v <= 0) delete next[id];
-        else next[id] = v;
+        const cur = next[id] || 0;
+        // Giving away spares only — the album copy stays put (never below 1).
+        if (cur >= 1) next[id] = Math.max(1, cur - qty);
       }
       for (const [id, qty] of Object.entries(s.incoming)) {
         next[id] = (next[id] || 0) + qty;

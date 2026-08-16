@@ -153,6 +153,9 @@
 {/if}
 
 {#if openItem}
+  <!-- key by openId: reopening a different sticker before the close transition
+       finishes would otherwise reuse the DOM and keep stale button state -->
+  {#key openId}
   <div class="overlay">
     <button
       class="backdrop"
@@ -179,12 +182,13 @@
       </p>
 
       <div class="stepper big">
-        <button on:click={() => adjust(openItem.id, -1)} disabled={openCount === 0} aria-label="Remove one">−</button>
+        <button on:click={() => adjust(openItem.id, -1)} disabled={openCount <= 1} aria-label="Remove one spare">−</button>
         <span class="n">{openCount}</span>
         <button on:click={() => adjust(openItem.id, +1)} aria-label="Add one">+</button>
       </div>
     </div>
   </div>
+  {/key}
 {/if}
 
 <style>

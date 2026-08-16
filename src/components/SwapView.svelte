@@ -18,21 +18,20 @@
   $: getTotal = Object.values($session.incoming).reduce((a, b) => a + b, 0);
   $: diff = getTotal - giveTotal; // + means you're receiving more
 
-  // Give options: anything you own. Spares first, then singles (for equalizing).
-  // Disabled once you've staged every copy you actually have.
+  // Give options: only spares (count - 1). The album copy stays put, so a
+  // sticker you own just one of isn't offered. Most spares first.
   $: giveOptions = $catalog
     .map((s) => ({ ...s, count: $collection[s.id] || 0 }))
-    .filter((s) => s.count >= 1)
-    .sort((a, b) => (b.count - 1) - (a.count - 1) || String(a.id).localeCompare(String(b.id)))
+    .filter((s) => s.count >= 2)
+    .sort((a, b) => (b.count - a.count) || String(a.id).localeCompare(String(b.id)))
     .map((s) => {
-      const staged = $session.outgoing[s.id] || 0;
-      const remaining = s.count - staged;
       const spare = s.count - 1;
+      const staged = $session.outgoing[s.id] || 0;
       return {
         id: s.id,
         name: s.name,
-        note: spare > 0 ? `${spare} spare` : 'last copy',
-        disabled: remaining <= 0,
+        note: `${spare} spare${spare === 1 ? '' : 's'}`,
+        disabled: staged >= spare,
       };
     });
 
@@ -128,7 +127,7 @@
           on:pick={(e) => pick('outgoing', e.detail)} on:close={() => (picker = null)} />
       {/if}
       {#if Object.keys($session.outgoing).length === 0}
-        <p class="empty">Pick spares (or any copy) to hand over.</p>
+        <p class="empty">Pick spares to hand over.</p>
       {:else}
         {#each Object.entries($session.outgoing) as [id, qty] (id)}
           <div class="line card">
@@ -138,7 +137,7 @@
               <button on:click={() => stage('outgoing', id, -1)} aria-label="Give one less">−</button>
               <span class="n">{qty}</span>
               <button on:click={() => stage('outgoing', id, +1)}
-                disabled={qty >= ($collection[id] || 0)} aria-label="Give one more">+</button>
+                disabled={qty >= (($collection[id] || 0) - 1)} aria-label="Give one more">+</button>
             </div>
           </div>
         {/each}

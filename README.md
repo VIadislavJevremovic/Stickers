@@ -15,8 +15,8 @@ Vite, deploys to GitHub Pages, installs to the iOS Home Screen as a PWA.
   to your collection) or **Cancel** (throws the session away, collection
   untouched). The session is saved as you go, so closing the app mid-trade
   doesn't lose it.
-  - Giving suggests your spares first but lets you hand over *any* copy you own,
-    so you can add extras to equalize an uneven trade.
+  - Giving only offers your **spares** (`count − 1`): once a sticker is in
+    the album it stays there, so its count never drops below 1.
   - Getting accepts any sticker; ones that fill a miss are flagged.
 - **Backup** — export your collection to a JSON file and re-import it (to move
   between your own devices, or just as a safety net since `localStorage` isn't
