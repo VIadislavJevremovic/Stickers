@@ -1,5 +1,5 @@
 <script>
-  import { catalog, collection, adjust, setCount } from '../lib/stores.js';
+  import { catalog, collection, adjust } from '../lib/stores.js';
   import { fade, scale } from 'svelte/transition';
 
   let filter = 'all';       // all | missing | have | spares
@@ -143,8 +143,7 @@
       <button class="close" on:click={() => (openId = null)} aria-label="Close">✕</button>
 
       <div class="mtag {stateClass(openCount)}">{openItem.id}</div>
-      {#if openItem.name}<p class="mname">{openItem.name}</p>{/if}
-      {#if openItem.set}<p class="mset">{openItem.set}</p>{/if}
+      <p class="mname">{openItem.set || openItem.name || 'Sticker ' + openItem.id}</p>
 
       <p class="mstate {stateClass(openCount)}">
         {#if openCount === 0}Missing
@@ -157,10 +156,6 @@
         <span class="n">{openCount}</span>
         <button on:click={() => adjust(openItem.id, +1)} aria-label="Add one">+</button>
       </div>
-
-      {#if openCount === 0}
-        <button class="quick" on:click={() => setCount(openItem.id, 1)}>Mark as owned</button>
-      {/if}
     </div>
   </div>
 {/if}
@@ -253,20 +248,13 @@
   .mtag.have { background: var(--have); color: #fff; }
   .mtag.spare { background: var(--spare); color: #fff; }
   .mtag.miss { background: var(--surface-2); border: 1px dashed var(--miss); color: var(--miss); }
-  .mname { font-size: 16px; font-weight: 600; margin: 0 0 2px; }
-  .mset { font-size: 13px; color: var(--muted); margin: 0 0 10px; }
-  .mstate { font-size: 13px; font-weight: 600; margin: 0 0 14px; }
+  .mname { font-size: 17px; font-weight: 600; margin: 0 0 4px; }
+  .mstate { font-size: 13px; font-weight: 600; margin: 0 0 16px; }
   .mstate.have { color: var(--have); }
   .mstate.spare { color: var(--spare); }
   .mstate.miss { color: var(--miss); }
 
-  .stepper.big { display: flex; }
-  .stepper.big button { width: 52px; height: 48px; font-size: 24px; }
-  .stepper.big .n { min-width: 48px; font-size: 20px; }
-
-  .quick {
-    display: block; width: 100%; margin-top: 14px; padding: 11px;
-    border: 1px solid var(--have); border-radius: 10px;
-    background: transparent; color: var(--have); font-weight: 600;
-  }
+  .stepper.big { display: inline-flex; }
+  .stepper.big button { width: 56px; height: 50px; font-size: 24px; }
+  .stepper.big .n { min-width: 52px; font-size: 20px; }
 </style>
