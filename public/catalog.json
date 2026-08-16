@@ -1,0 +1,4949 @@
+[
+  {
+    "id": "00",
+    "set": "Special"
+  },
+  {
+    "id": "FWC1",
+    "name": "FIFA World Cup 1",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC2",
+    "name": "FIFA World Cup 2",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC3",
+    "name": "FIFA World Cup 3",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC4",
+    "name": "FIFA World Cup 4",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC5",
+    "name": "FIFA World Cup 5",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC6",
+    "name": "FIFA World Cup 6",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC7",
+    "name": "FIFA World Cup 7",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC8",
+    "name": "FIFA World Cup 8",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "MEX1",
+    "name": "Mexico 1",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX2",
+    "name": "Mexico 2",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX3",
+    "name": "Mexico 3",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX4",
+    "name": "Mexico 4",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX5",
+    "name": "Mexico 5",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX6",
+    "name": "Mexico 6",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX7",
+    "name": "Mexico 7",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX8",
+    "name": "Mexico 8",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX9",
+    "name": "Mexico 9",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX10",
+    "name": "Mexico 10",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX11",
+    "name": "Mexico 11",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX12",
+    "name": "Mexico 12",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX13",
+    "name": "Mexico 13",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX14",
+    "name": "Mexico 14",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX15",
+    "name": "Mexico 15",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX16",
+    "name": "Mexico 16",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX17",
+    "name": "Mexico 17",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX18",
+    "name": "Mexico 18",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX19",
+    "name": "Mexico 19",
+    "set": "Mexico"
+  },
+  {
+    "id": "MEX20",
+    "name": "Mexico 20",
+    "set": "Mexico"
+  },
+  {
+    "id": "RSA1",
+    "name": "South Africa 1",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA2",
+    "name": "South Africa 2",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA3",
+    "name": "South Africa 3",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA4",
+    "name": "South Africa 4",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA5",
+    "name": "South Africa 5",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA6",
+    "name": "South Africa 6",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA7",
+    "name": "South Africa 7",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA8",
+    "name": "South Africa 8",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA9",
+    "name": "South Africa 9",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA10",
+    "name": "South Africa 10",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA11",
+    "name": "South Africa 11",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA12",
+    "name": "South Africa 12",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA13",
+    "name": "South Africa 13",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA14",
+    "name": "South Africa 14",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA15",
+    "name": "South Africa 15",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA16",
+    "name": "South Africa 16",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA17",
+    "name": "South Africa 17",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA18",
+    "name": "South Africa 18",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA19",
+    "name": "South Africa 19",
+    "set": "South Africa"
+  },
+  {
+    "id": "RSA20",
+    "name": "South Africa 20",
+    "set": "South Africa"
+  },
+  {
+    "id": "KOR1",
+    "name": "Korea Rep. 1",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR2",
+    "name": "Korea Rep. 2",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR3",
+    "name": "Korea Rep. 3",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR4",
+    "name": "Korea Rep. 4",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR5",
+    "name": "Korea Rep. 5",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR6",
+    "name": "Korea Rep. 6",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR7",
+    "name": "Korea Rep. 7",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR8",
+    "name": "Korea Rep. 8",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR9",
+    "name": "Korea Rep. 9",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR10",
+    "name": "Korea Rep. 10",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR11",
+    "name": "Korea Rep. 11",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR12",
+    "name": "Korea Rep. 12",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR13",
+    "name": "Korea Rep. 13",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR14",
+    "name": "Korea Rep. 14",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR15",
+    "name": "Korea Rep. 15",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR16",
+    "name": "Korea Rep. 16",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR17",
+    "name": "Korea Rep. 17",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR18",
+    "name": "Korea Rep. 18",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR19",
+    "name": "Korea Rep. 19",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "KOR20",
+    "name": "Korea Rep. 20",
+    "set": "Korea Rep."
+  },
+  {
+    "id": "CZE1",
+    "name": "Czechia 1",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE2",
+    "name": "Czechia 2",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE3",
+    "name": "Czechia 3",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE4",
+    "name": "Czechia 4",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE5",
+    "name": "Czechia 5",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE6",
+    "name": "Czechia 6",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE7",
+    "name": "Czechia 7",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE8",
+    "name": "Czechia 8",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE9",
+    "name": "Czechia 9",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE10",
+    "name": "Czechia 10",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE11",
+    "name": "Czechia 11",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE12",
+    "name": "Czechia 12",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE13",
+    "name": "Czechia 13",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE14",
+    "name": "Czechia 14",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE15",
+    "name": "Czechia 15",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE16",
+    "name": "Czechia 16",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE17",
+    "name": "Czechia 17",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE18",
+    "name": "Czechia 18",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE19",
+    "name": "Czechia 19",
+    "set": "Czechia"
+  },
+  {
+    "id": "CZE20",
+    "name": "Czechia 20",
+    "set": "Czechia"
+  },
+  {
+    "id": "CAN1",
+    "name": "Canada 1",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN2",
+    "name": "Canada 2",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN3",
+    "name": "Canada 3",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN4",
+    "name": "Canada 4",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN5",
+    "name": "Canada 5",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN6",
+    "name": "Canada 6",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN7",
+    "name": "Canada 7",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN8",
+    "name": "Canada 8",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN9",
+    "name": "Canada 9",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN10",
+    "name": "Canada 10",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN11",
+    "name": "Canada 11",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN12",
+    "name": "Canada 12",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN13",
+    "name": "Canada 13",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN14",
+    "name": "Canada 14",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN15",
+    "name": "Canada 15",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN16",
+    "name": "Canada 16",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN17",
+    "name": "Canada 17",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN18",
+    "name": "Canada 18",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN19",
+    "name": "Canada 19",
+    "set": "Canada"
+  },
+  {
+    "id": "CAN20",
+    "name": "Canada 20",
+    "set": "Canada"
+  },
+  {
+    "id": "BIH1",
+    "name": "Bosnia & Herzegovina 1",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH2",
+    "name": "Bosnia & Herzegovina 2",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH3",
+    "name": "Bosnia & Herzegovina 3",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH4",
+    "name": "Bosnia & Herzegovina 4",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH5",
+    "name": "Bosnia & Herzegovina 5",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH6",
+    "name": "Bosnia & Herzegovina 6",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH7",
+    "name": "Bosnia & Herzegovina 7",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH8",
+    "name": "Bosnia & Herzegovina 8",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH9",
+    "name": "Bosnia & Herzegovina 9",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH10",
+    "name": "Bosnia & Herzegovina 10",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH11",
+    "name": "Bosnia & Herzegovina 11",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH12",
+    "name": "Bosnia & Herzegovina 12",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH13",
+    "name": "Bosnia & Herzegovina 13",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH14",
+    "name": "Bosnia & Herzegovina 14",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH15",
+    "name": "Bosnia & Herzegovina 15",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH16",
+    "name": "Bosnia & Herzegovina 16",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH17",
+    "name": "Bosnia & Herzegovina 17",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH18",
+    "name": "Bosnia & Herzegovina 18",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH19",
+    "name": "Bosnia & Herzegovina 19",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "BIH20",
+    "name": "Bosnia & Herzegovina 20",
+    "set": "Bosnia & Herzegovina"
+  },
+  {
+    "id": "QAT1",
+    "name": "Qatar 1",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT2",
+    "name": "Qatar 2",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT3",
+    "name": "Qatar 3",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT4",
+    "name": "Qatar 4",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT5",
+    "name": "Qatar 5",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT6",
+    "name": "Qatar 6",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT7",
+    "name": "Qatar 7",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT8",
+    "name": "Qatar 8",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT9",
+    "name": "Qatar 9",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT10",
+    "name": "Qatar 10",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT11",
+    "name": "Qatar 11",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT12",
+    "name": "Qatar 12",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT13",
+    "name": "Qatar 13",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT14",
+    "name": "Qatar 14",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT15",
+    "name": "Qatar 15",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT16",
+    "name": "Qatar 16",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT17",
+    "name": "Qatar 17",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT18",
+    "name": "Qatar 18",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT19",
+    "name": "Qatar 19",
+    "set": "Qatar"
+  },
+  {
+    "id": "QAT20",
+    "name": "Qatar 20",
+    "set": "Qatar"
+  },
+  {
+    "id": "SUI1",
+    "name": "Switzerland 1",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI2",
+    "name": "Switzerland 2",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI3",
+    "name": "Switzerland 3",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI4",
+    "name": "Switzerland 4",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI5",
+    "name": "Switzerland 5",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI6",
+    "name": "Switzerland 6",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI7",
+    "name": "Switzerland 7",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI8",
+    "name": "Switzerland 8",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI9",
+    "name": "Switzerland 9",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI10",
+    "name": "Switzerland 10",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI11",
+    "name": "Switzerland 11",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI12",
+    "name": "Switzerland 12",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI13",
+    "name": "Switzerland 13",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI14",
+    "name": "Switzerland 14",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI15",
+    "name": "Switzerland 15",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI16",
+    "name": "Switzerland 16",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI17",
+    "name": "Switzerland 17",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI18",
+    "name": "Switzerland 18",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI19",
+    "name": "Switzerland 19",
+    "set": "Switzerland"
+  },
+  {
+    "id": "SUI20",
+    "name": "Switzerland 20",
+    "set": "Switzerland"
+  },
+  {
+    "id": "BRA1",
+    "name": "Brazil 1",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA2",
+    "name": "Brazil 2",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA3",
+    "name": "Brazil 3",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA4",
+    "name": "Brazil 4",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA5",
+    "name": "Brazil 5",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA6",
+    "name": "Brazil 6",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA7",
+    "name": "Brazil 7",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA8",
+    "name": "Brazil 8",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA9",
+    "name": "Brazil 9",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA10",
+    "name": "Brazil 10",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA11",
+    "name": "Brazil 11",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA12",
+    "name": "Brazil 12",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA13",
+    "name": "Brazil 13",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA14",
+    "name": "Brazil 14",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA15",
+    "name": "Brazil 15",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA16",
+    "name": "Brazil 16",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA17",
+    "name": "Brazil 17",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA18",
+    "name": "Brazil 18",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA19",
+    "name": "Brazil 19",
+    "set": "Brazil"
+  },
+  {
+    "id": "BRA20",
+    "name": "Brazil 20",
+    "set": "Brazil"
+  },
+  {
+    "id": "MAR1",
+    "name": "Morocco 1",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR2",
+    "name": "Morocco 2",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR3",
+    "name": "Morocco 3",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR4",
+    "name": "Morocco 4",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR5",
+    "name": "Morocco 5",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR6",
+    "name": "Morocco 6",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR7",
+    "name": "Morocco 7",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR8",
+    "name": "Morocco 8",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR9",
+    "name": "Morocco 9",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR10",
+    "name": "Morocco 10",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR11",
+    "name": "Morocco 11",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR12",
+    "name": "Morocco 12",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR13",
+    "name": "Morocco 13",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR14",
+    "name": "Morocco 14",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR15",
+    "name": "Morocco 15",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR16",
+    "name": "Morocco 16",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR17",
+    "name": "Morocco 17",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR18",
+    "name": "Morocco 18",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR19",
+    "name": "Morocco 19",
+    "set": "Morocco"
+  },
+  {
+    "id": "MAR20",
+    "name": "Morocco 20",
+    "set": "Morocco"
+  },
+  {
+    "id": "HAI1",
+    "name": "Haiti 1",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI2",
+    "name": "Haiti 2",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI3",
+    "name": "Haiti 3",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI4",
+    "name": "Haiti 4",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI5",
+    "name": "Haiti 5",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI6",
+    "name": "Haiti 6",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI7",
+    "name": "Haiti 7",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI8",
+    "name": "Haiti 8",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI9",
+    "name": "Haiti 9",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI10",
+    "name": "Haiti 10",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI11",
+    "name": "Haiti 11",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI12",
+    "name": "Haiti 12",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI13",
+    "name": "Haiti 13",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI14",
+    "name": "Haiti 14",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI15",
+    "name": "Haiti 15",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI16",
+    "name": "Haiti 16",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI17",
+    "name": "Haiti 17",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI18",
+    "name": "Haiti 18",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI19",
+    "name": "Haiti 19",
+    "set": "Haiti"
+  },
+  {
+    "id": "HAI20",
+    "name": "Haiti 20",
+    "set": "Haiti"
+  },
+  {
+    "id": "SCO1",
+    "name": "Scotland 1",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO2",
+    "name": "Scotland 2",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO3",
+    "name": "Scotland 3",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO4",
+    "name": "Scotland 4",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO5",
+    "name": "Scotland 5",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO6",
+    "name": "Scotland 6",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO7",
+    "name": "Scotland 7",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO8",
+    "name": "Scotland 8",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO9",
+    "name": "Scotland 9",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO10",
+    "name": "Scotland 10",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO11",
+    "name": "Scotland 11",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO12",
+    "name": "Scotland 12",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO13",
+    "name": "Scotland 13",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO14",
+    "name": "Scotland 14",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO15",
+    "name": "Scotland 15",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO16",
+    "name": "Scotland 16",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO17",
+    "name": "Scotland 17",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO18",
+    "name": "Scotland 18",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO19",
+    "name": "Scotland 19",
+    "set": "Scotland"
+  },
+  {
+    "id": "SCO20",
+    "name": "Scotland 20",
+    "set": "Scotland"
+  },
+  {
+    "id": "USA1",
+    "name": "United States 1",
+    "set": "United States"
+  },
+  {
+    "id": "USA2",
+    "name": "United States 2",
+    "set": "United States"
+  },
+  {
+    "id": "USA3",
+    "name": "United States 3",
+    "set": "United States"
+  },
+  {
+    "id": "USA4",
+    "name": "United States 4",
+    "set": "United States"
+  },
+  {
+    "id": "USA5",
+    "name": "United States 5",
+    "set": "United States"
+  },
+  {
+    "id": "USA6",
+    "name": "United States 6",
+    "set": "United States"
+  },
+  {
+    "id": "USA7",
+    "name": "United States 7",
+    "set": "United States"
+  },
+  {
+    "id": "USA8",
+    "name": "United States 8",
+    "set": "United States"
+  },
+  {
+    "id": "USA9",
+    "name": "United States 9",
+    "set": "United States"
+  },
+  {
+    "id": "USA10",
+    "name": "United States 10",
+    "set": "United States"
+  },
+  {
+    "id": "USA11",
+    "name": "United States 11",
+    "set": "United States"
+  },
+  {
+    "id": "USA12",
+    "name": "United States 12",
+    "set": "United States"
+  },
+  {
+    "id": "USA13",
+    "name": "United States 13",
+    "set": "United States"
+  },
+  {
+    "id": "USA14",
+    "name": "United States 14",
+    "set": "United States"
+  },
+  {
+    "id": "USA15",
+    "name": "United States 15",
+    "set": "United States"
+  },
+  {
+    "id": "USA16",
+    "name": "United States 16",
+    "set": "United States"
+  },
+  {
+    "id": "USA17",
+    "name": "United States 17",
+    "set": "United States"
+  },
+  {
+    "id": "USA18",
+    "name": "United States 18",
+    "set": "United States"
+  },
+  {
+    "id": "USA19",
+    "name": "United States 19",
+    "set": "United States"
+  },
+  {
+    "id": "USA20",
+    "name": "United States 20",
+    "set": "United States"
+  },
+  {
+    "id": "PAR1",
+    "name": "Paraguay 1",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR2",
+    "name": "Paraguay 2",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR3",
+    "name": "Paraguay 3",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR4",
+    "name": "Paraguay 4",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR5",
+    "name": "Paraguay 5",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR6",
+    "name": "Paraguay 6",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR7",
+    "name": "Paraguay 7",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR8",
+    "name": "Paraguay 8",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR9",
+    "name": "Paraguay 9",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR10",
+    "name": "Paraguay 10",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR11",
+    "name": "Paraguay 11",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR12",
+    "name": "Paraguay 12",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR13",
+    "name": "Paraguay 13",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR14",
+    "name": "Paraguay 14",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR15",
+    "name": "Paraguay 15",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR16",
+    "name": "Paraguay 16",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR17",
+    "name": "Paraguay 17",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR18",
+    "name": "Paraguay 18",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR19",
+    "name": "Paraguay 19",
+    "set": "Paraguay"
+  },
+  {
+    "id": "PAR20",
+    "name": "Paraguay 20",
+    "set": "Paraguay"
+  },
+  {
+    "id": "AUS1",
+    "name": "Australia 1",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS2",
+    "name": "Australia 2",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS3",
+    "name": "Australia 3",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS4",
+    "name": "Australia 4",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS5",
+    "name": "Australia 5",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS6",
+    "name": "Australia 6",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS7",
+    "name": "Australia 7",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS8",
+    "name": "Australia 8",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS9",
+    "name": "Australia 9",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS10",
+    "name": "Australia 10",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS11",
+    "name": "Australia 11",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS12",
+    "name": "Australia 12",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS13",
+    "name": "Australia 13",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS14",
+    "name": "Australia 14",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS15",
+    "name": "Australia 15",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS16",
+    "name": "Australia 16",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS17",
+    "name": "Australia 17",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS18",
+    "name": "Australia 18",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS19",
+    "name": "Australia 19",
+    "set": "Australia"
+  },
+  {
+    "id": "AUS20",
+    "name": "Australia 20",
+    "set": "Australia"
+  },
+  {
+    "id": "TUR1",
+    "name": "Turkiye 1",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR2",
+    "name": "Turkiye 2",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR3",
+    "name": "Turkiye 3",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR4",
+    "name": "Turkiye 4",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR5",
+    "name": "Turkiye 5",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR6",
+    "name": "Turkiye 6",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR7",
+    "name": "Turkiye 7",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR8",
+    "name": "Turkiye 8",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR9",
+    "name": "Turkiye 9",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR10",
+    "name": "Turkiye 10",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR11",
+    "name": "Turkiye 11",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR12",
+    "name": "Turkiye 12",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR13",
+    "name": "Turkiye 13",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR14",
+    "name": "Turkiye 14",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR15",
+    "name": "Turkiye 15",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR16",
+    "name": "Turkiye 16",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR17",
+    "name": "Turkiye 17",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR18",
+    "name": "Turkiye 18",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR19",
+    "name": "Turkiye 19",
+    "set": "Turkiye"
+  },
+  {
+    "id": "TUR20",
+    "name": "Turkiye 20",
+    "set": "Turkiye"
+  },
+  {
+    "id": "GER1",
+    "name": "Germany 1",
+    "set": "Germany"
+  },
+  {
+    "id": "GER2",
+    "name": "Germany 2",
+    "set": "Germany"
+  },
+  {
+    "id": "GER3",
+    "name": "Germany 3",
+    "set": "Germany"
+  },
+  {
+    "id": "GER4",
+    "name": "Germany 4",
+    "set": "Germany"
+  },
+  {
+    "id": "GER5",
+    "name": "Germany 5",
+    "set": "Germany"
+  },
+  {
+    "id": "GER6",
+    "name": "Germany 6",
+    "set": "Germany"
+  },
+  {
+    "id": "GER7",
+    "name": "Germany 7",
+    "set": "Germany"
+  },
+  {
+    "id": "GER8",
+    "name": "Germany 8",
+    "set": "Germany"
+  },
+  {
+    "id": "GER9",
+    "name": "Germany 9",
+    "set": "Germany"
+  },
+  {
+    "id": "GER10",
+    "name": "Germany 10",
+    "set": "Germany"
+  },
+  {
+    "id": "GER11",
+    "name": "Germany 11",
+    "set": "Germany"
+  },
+  {
+    "id": "GER12",
+    "name": "Germany 12",
+    "set": "Germany"
+  },
+  {
+    "id": "GER13",
+    "name": "Germany 13",
+    "set": "Germany"
+  },
+  {
+    "id": "GER14",
+    "name": "Germany 14",
+    "set": "Germany"
+  },
+  {
+    "id": "GER15",
+    "name": "Germany 15",
+    "set": "Germany"
+  },
+  {
+    "id": "GER16",
+    "name": "Germany 16",
+    "set": "Germany"
+  },
+  {
+    "id": "GER17",
+    "name": "Germany 17",
+    "set": "Germany"
+  },
+  {
+    "id": "GER18",
+    "name": "Germany 18",
+    "set": "Germany"
+  },
+  {
+    "id": "GER19",
+    "name": "Germany 19",
+    "set": "Germany"
+  },
+  {
+    "id": "GER20",
+    "name": "Germany 20",
+    "set": "Germany"
+  },
+  {
+    "id": "CUW1",
+    "name": "Curacao 1",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW2",
+    "name": "Curacao 2",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW3",
+    "name": "Curacao 3",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW4",
+    "name": "Curacao 4",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW5",
+    "name": "Curacao 5",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW6",
+    "name": "Curacao 6",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW7",
+    "name": "Curacao 7",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW8",
+    "name": "Curacao 8",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW9",
+    "name": "Curacao 9",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW10",
+    "name": "Curacao 10",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW11",
+    "name": "Curacao 11",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW12",
+    "name": "Curacao 12",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW13",
+    "name": "Curacao 13",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW14",
+    "name": "Curacao 14",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW15",
+    "name": "Curacao 15",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW16",
+    "name": "Curacao 16",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW17",
+    "name": "Curacao 17",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW18",
+    "name": "Curacao 18",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW19",
+    "name": "Curacao 19",
+    "set": "Curacao"
+  },
+  {
+    "id": "CUW20",
+    "name": "Curacao 20",
+    "set": "Curacao"
+  },
+  {
+    "id": "CIV1",
+    "name": "Cote d'Ivoire 1",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV2",
+    "name": "Cote d'Ivoire 2",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV3",
+    "name": "Cote d'Ivoire 3",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV4",
+    "name": "Cote d'Ivoire 4",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV5",
+    "name": "Cote d'Ivoire 5",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV6",
+    "name": "Cote d'Ivoire 6",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV7",
+    "name": "Cote d'Ivoire 7",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV8",
+    "name": "Cote d'Ivoire 8",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV9",
+    "name": "Cote d'Ivoire 9",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV10",
+    "name": "Cote d'Ivoire 10",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV11",
+    "name": "Cote d'Ivoire 11",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV12",
+    "name": "Cote d'Ivoire 12",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV13",
+    "name": "Cote d'Ivoire 13",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV14",
+    "name": "Cote d'Ivoire 14",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV15",
+    "name": "Cote d'Ivoire 15",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV16",
+    "name": "Cote d'Ivoire 16",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV17",
+    "name": "Cote d'Ivoire 17",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV18",
+    "name": "Cote d'Ivoire 18",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV19",
+    "name": "Cote d'Ivoire 19",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "CIV20",
+    "name": "Cote d'Ivoire 20",
+    "set": "Cote d'Ivoire"
+  },
+  {
+    "id": "ECU1",
+    "name": "Ecuador 1",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU2",
+    "name": "Ecuador 2",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU3",
+    "name": "Ecuador 3",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU4",
+    "name": "Ecuador 4",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU5",
+    "name": "Ecuador 5",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU6",
+    "name": "Ecuador 6",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU7",
+    "name": "Ecuador 7",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU8",
+    "name": "Ecuador 8",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU9",
+    "name": "Ecuador 9",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU10",
+    "name": "Ecuador 10",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU11",
+    "name": "Ecuador 11",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU12",
+    "name": "Ecuador 12",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU13",
+    "name": "Ecuador 13",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU14",
+    "name": "Ecuador 14",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU15",
+    "name": "Ecuador 15",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU16",
+    "name": "Ecuador 16",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU17",
+    "name": "Ecuador 17",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU18",
+    "name": "Ecuador 18",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU19",
+    "name": "Ecuador 19",
+    "set": "Ecuador"
+  },
+  {
+    "id": "ECU20",
+    "name": "Ecuador 20",
+    "set": "Ecuador"
+  },
+  {
+    "id": "NED1",
+    "name": "Netherlands 1",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED2",
+    "name": "Netherlands 2",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED3",
+    "name": "Netherlands 3",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED4",
+    "name": "Netherlands 4",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED5",
+    "name": "Netherlands 5",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED6",
+    "name": "Netherlands 6",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED7",
+    "name": "Netherlands 7",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED8",
+    "name": "Netherlands 8",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED9",
+    "name": "Netherlands 9",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED10",
+    "name": "Netherlands 10",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED11",
+    "name": "Netherlands 11",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED12",
+    "name": "Netherlands 12",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED13",
+    "name": "Netherlands 13",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED14",
+    "name": "Netherlands 14",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED15",
+    "name": "Netherlands 15",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED16",
+    "name": "Netherlands 16",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED17",
+    "name": "Netherlands 17",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED18",
+    "name": "Netherlands 18",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED19",
+    "name": "Netherlands 19",
+    "set": "Netherlands"
+  },
+  {
+    "id": "NED20",
+    "name": "Netherlands 20",
+    "set": "Netherlands"
+  },
+  {
+    "id": "JPN1",
+    "name": "Japan 1",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN2",
+    "name": "Japan 2",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN3",
+    "name": "Japan 3",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN4",
+    "name": "Japan 4",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN5",
+    "name": "Japan 5",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN6",
+    "name": "Japan 6",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN7",
+    "name": "Japan 7",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN8",
+    "name": "Japan 8",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN9",
+    "name": "Japan 9",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN10",
+    "name": "Japan 10",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN11",
+    "name": "Japan 11",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN12",
+    "name": "Japan 12",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN13",
+    "name": "Japan 13",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN14",
+    "name": "Japan 14",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN15",
+    "name": "Japan 15",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN16",
+    "name": "Japan 16",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN17",
+    "name": "Japan 17",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN18",
+    "name": "Japan 18",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN19",
+    "name": "Japan 19",
+    "set": "Japan"
+  },
+  {
+    "id": "JPN20",
+    "name": "Japan 20",
+    "set": "Japan"
+  },
+  {
+    "id": "SWE1",
+    "name": "Sweden 1",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE2",
+    "name": "Sweden 2",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE3",
+    "name": "Sweden 3",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE4",
+    "name": "Sweden 4",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE5",
+    "name": "Sweden 5",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE6",
+    "name": "Sweden 6",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE7",
+    "name": "Sweden 7",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE8",
+    "name": "Sweden 8",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE9",
+    "name": "Sweden 9",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE10",
+    "name": "Sweden 10",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE11",
+    "name": "Sweden 11",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE12",
+    "name": "Sweden 12",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE13",
+    "name": "Sweden 13",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE14",
+    "name": "Sweden 14",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE15",
+    "name": "Sweden 15",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE16",
+    "name": "Sweden 16",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE17",
+    "name": "Sweden 17",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE18",
+    "name": "Sweden 18",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE19",
+    "name": "Sweden 19",
+    "set": "Sweden"
+  },
+  {
+    "id": "SWE20",
+    "name": "Sweden 20",
+    "set": "Sweden"
+  },
+  {
+    "id": "TUN1",
+    "name": "Tunisia 1",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN2",
+    "name": "Tunisia 2",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN3",
+    "name": "Tunisia 3",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN4",
+    "name": "Tunisia 4",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN5",
+    "name": "Tunisia 5",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN6",
+    "name": "Tunisia 6",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN7",
+    "name": "Tunisia 7",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN8",
+    "name": "Tunisia 8",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN9",
+    "name": "Tunisia 9",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN10",
+    "name": "Tunisia 10",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN11",
+    "name": "Tunisia 11",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN12",
+    "name": "Tunisia 12",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN13",
+    "name": "Tunisia 13",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN14",
+    "name": "Tunisia 14",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN15",
+    "name": "Tunisia 15",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN16",
+    "name": "Tunisia 16",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN17",
+    "name": "Tunisia 17",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN18",
+    "name": "Tunisia 18",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN19",
+    "name": "Tunisia 19",
+    "set": "Tunisia"
+  },
+  {
+    "id": "TUN20",
+    "name": "Tunisia 20",
+    "set": "Tunisia"
+  },
+  {
+    "id": "BEL1",
+    "name": "Belgium 1",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL2",
+    "name": "Belgium 2",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL3",
+    "name": "Belgium 3",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL4",
+    "name": "Belgium 4",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL5",
+    "name": "Belgium 5",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL6",
+    "name": "Belgium 6",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL7",
+    "name": "Belgium 7",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL8",
+    "name": "Belgium 8",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL9",
+    "name": "Belgium 9",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL10",
+    "name": "Belgium 10",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL11",
+    "name": "Belgium 11",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL12",
+    "name": "Belgium 12",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL13",
+    "name": "Belgium 13",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL14",
+    "name": "Belgium 14",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL15",
+    "name": "Belgium 15",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL16",
+    "name": "Belgium 16",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL17",
+    "name": "Belgium 17",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL18",
+    "name": "Belgium 18",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL19",
+    "name": "Belgium 19",
+    "set": "Belgium"
+  },
+  {
+    "id": "BEL20",
+    "name": "Belgium 20",
+    "set": "Belgium"
+  },
+  {
+    "id": "EGY1",
+    "name": "Egypt 1",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY2",
+    "name": "Egypt 2",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY3",
+    "name": "Egypt 3",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY4",
+    "name": "Egypt 4",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY5",
+    "name": "Egypt 5",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY6",
+    "name": "Egypt 6",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY7",
+    "name": "Egypt 7",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY8",
+    "name": "Egypt 8",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY9",
+    "name": "Egypt 9",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY10",
+    "name": "Egypt 10",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY11",
+    "name": "Egypt 11",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY12",
+    "name": "Egypt 12",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY13",
+    "name": "Egypt 13",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY14",
+    "name": "Egypt 14",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY15",
+    "name": "Egypt 15",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY16",
+    "name": "Egypt 16",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY17",
+    "name": "Egypt 17",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY18",
+    "name": "Egypt 18",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY19",
+    "name": "Egypt 19",
+    "set": "Egypt"
+  },
+  {
+    "id": "EGY20",
+    "name": "Egypt 20",
+    "set": "Egypt"
+  },
+  {
+    "id": "IRN1",
+    "name": "Iran 1",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN2",
+    "name": "Iran 2",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN3",
+    "name": "Iran 3",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN4",
+    "name": "Iran 4",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN5",
+    "name": "Iran 5",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN6",
+    "name": "Iran 6",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN7",
+    "name": "Iran 7",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN8",
+    "name": "Iran 8",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN9",
+    "name": "Iran 9",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN10",
+    "name": "Iran 10",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN11",
+    "name": "Iran 11",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN12",
+    "name": "Iran 12",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN13",
+    "name": "Iran 13",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN14",
+    "name": "Iran 14",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN15",
+    "name": "Iran 15",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN16",
+    "name": "Iran 16",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN17",
+    "name": "Iran 17",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN18",
+    "name": "Iran 18",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN19",
+    "name": "Iran 19",
+    "set": "Iran"
+  },
+  {
+    "id": "IRN20",
+    "name": "Iran 20",
+    "set": "Iran"
+  },
+  {
+    "id": "NZL1",
+    "name": "New Zealand 1",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL2",
+    "name": "New Zealand 2",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL3",
+    "name": "New Zealand 3",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL4",
+    "name": "New Zealand 4",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL5",
+    "name": "New Zealand 5",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL6",
+    "name": "New Zealand 6",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL7",
+    "name": "New Zealand 7",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL8",
+    "name": "New Zealand 8",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL9",
+    "name": "New Zealand 9",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL10",
+    "name": "New Zealand 10",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL11",
+    "name": "New Zealand 11",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL12",
+    "name": "New Zealand 12",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL13",
+    "name": "New Zealand 13",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL14",
+    "name": "New Zealand 14",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL15",
+    "name": "New Zealand 15",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL16",
+    "name": "New Zealand 16",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL17",
+    "name": "New Zealand 17",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL18",
+    "name": "New Zealand 18",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL19",
+    "name": "New Zealand 19",
+    "set": "New Zealand"
+  },
+  {
+    "id": "NZL20",
+    "name": "New Zealand 20",
+    "set": "New Zealand"
+  },
+  {
+    "id": "ESP1",
+    "name": "Spain 1",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP2",
+    "name": "Spain 2",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP3",
+    "name": "Spain 3",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP4",
+    "name": "Spain 4",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP5",
+    "name": "Spain 5",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP6",
+    "name": "Spain 6",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP7",
+    "name": "Spain 7",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP8",
+    "name": "Spain 8",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP9",
+    "name": "Spain 9",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP10",
+    "name": "Spain 10",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP11",
+    "name": "Spain 11",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP12",
+    "name": "Spain 12",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP13",
+    "name": "Spain 13",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP14",
+    "name": "Spain 14",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP15",
+    "name": "Spain 15",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP16",
+    "name": "Spain 16",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP17",
+    "name": "Spain 17",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP18",
+    "name": "Spain 18",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP19",
+    "name": "Spain 19",
+    "set": "Spain"
+  },
+  {
+    "id": "ESP20",
+    "name": "Spain 20",
+    "set": "Spain"
+  },
+  {
+    "id": "CPV1",
+    "name": "Cape Verde 1",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV2",
+    "name": "Cape Verde 2",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV3",
+    "name": "Cape Verde 3",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV4",
+    "name": "Cape Verde 4",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV5",
+    "name": "Cape Verde 5",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV6",
+    "name": "Cape Verde 6",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV7",
+    "name": "Cape Verde 7",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV8",
+    "name": "Cape Verde 8",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV9",
+    "name": "Cape Verde 9",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV10",
+    "name": "Cape Verde 10",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV11",
+    "name": "Cape Verde 11",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV12",
+    "name": "Cape Verde 12",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV13",
+    "name": "Cape Verde 13",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV14",
+    "name": "Cape Verde 14",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV15",
+    "name": "Cape Verde 15",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV16",
+    "name": "Cape Verde 16",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV17",
+    "name": "Cape Verde 17",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV18",
+    "name": "Cape Verde 18",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV19",
+    "name": "Cape Verde 19",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "CPV20",
+    "name": "Cape Verde 20",
+    "set": "Cape Verde"
+  },
+  {
+    "id": "KSA1",
+    "name": "Saudi Arabia 1",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA2",
+    "name": "Saudi Arabia 2",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA3",
+    "name": "Saudi Arabia 3",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA4",
+    "name": "Saudi Arabia 4",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA5",
+    "name": "Saudi Arabia 5",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA6",
+    "name": "Saudi Arabia 6",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA7",
+    "name": "Saudi Arabia 7",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA8",
+    "name": "Saudi Arabia 8",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA9",
+    "name": "Saudi Arabia 9",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA10",
+    "name": "Saudi Arabia 10",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA11",
+    "name": "Saudi Arabia 11",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA12",
+    "name": "Saudi Arabia 12",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA13",
+    "name": "Saudi Arabia 13",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA14",
+    "name": "Saudi Arabia 14",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA15",
+    "name": "Saudi Arabia 15",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA16",
+    "name": "Saudi Arabia 16",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA17",
+    "name": "Saudi Arabia 17",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA18",
+    "name": "Saudi Arabia 18",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA19",
+    "name": "Saudi Arabia 19",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "KSA20",
+    "name": "Saudi Arabia 20",
+    "set": "Saudi Arabia"
+  },
+  {
+    "id": "URU1",
+    "name": "Uruguay 1",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU2",
+    "name": "Uruguay 2",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU3",
+    "name": "Uruguay 3",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU4",
+    "name": "Uruguay 4",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU5",
+    "name": "Uruguay 5",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU6",
+    "name": "Uruguay 6",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU7",
+    "name": "Uruguay 7",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU8",
+    "name": "Uruguay 8",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU9",
+    "name": "Uruguay 9",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU10",
+    "name": "Uruguay 10",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU11",
+    "name": "Uruguay 11",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU12",
+    "name": "Uruguay 12",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU13",
+    "name": "Uruguay 13",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU14",
+    "name": "Uruguay 14",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU15",
+    "name": "Uruguay 15",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU16",
+    "name": "Uruguay 16",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU17",
+    "name": "Uruguay 17",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU18",
+    "name": "Uruguay 18",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU19",
+    "name": "Uruguay 19",
+    "set": "Uruguay"
+  },
+  {
+    "id": "URU20",
+    "name": "Uruguay 20",
+    "set": "Uruguay"
+  },
+  {
+    "id": "FRA1",
+    "name": "France 1",
+    "set": "France"
+  },
+  {
+    "id": "FRA2",
+    "name": "France 2",
+    "set": "France"
+  },
+  {
+    "id": "FRA3",
+    "name": "France 3",
+    "set": "France"
+  },
+  {
+    "id": "FRA4",
+    "name": "France 4",
+    "set": "France"
+  },
+  {
+    "id": "FRA5",
+    "name": "France 5",
+    "set": "France"
+  },
+  {
+    "id": "FRA6",
+    "name": "France 6",
+    "set": "France"
+  },
+  {
+    "id": "FRA7",
+    "name": "France 7",
+    "set": "France"
+  },
+  {
+    "id": "FRA8",
+    "name": "France 8",
+    "set": "France"
+  },
+  {
+    "id": "FRA9",
+    "name": "France 9",
+    "set": "France"
+  },
+  {
+    "id": "FRA10",
+    "name": "France 10",
+    "set": "France"
+  },
+  {
+    "id": "FRA11",
+    "name": "France 11",
+    "set": "France"
+  },
+  {
+    "id": "FRA12",
+    "name": "France 12",
+    "set": "France"
+  },
+  {
+    "id": "FRA13",
+    "name": "France 13",
+    "set": "France"
+  },
+  {
+    "id": "FRA14",
+    "name": "France 14",
+    "set": "France"
+  },
+  {
+    "id": "FRA15",
+    "name": "France 15",
+    "set": "France"
+  },
+  {
+    "id": "FRA16",
+    "name": "France 16",
+    "set": "France"
+  },
+  {
+    "id": "FRA17",
+    "name": "France 17",
+    "set": "France"
+  },
+  {
+    "id": "FRA18",
+    "name": "France 18",
+    "set": "France"
+  },
+  {
+    "id": "FRA19",
+    "name": "France 19",
+    "set": "France"
+  },
+  {
+    "id": "FRA20",
+    "name": "France 20",
+    "set": "France"
+  },
+  {
+    "id": "SEN1",
+    "name": "Senegal 1",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN2",
+    "name": "Senegal 2",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN3",
+    "name": "Senegal 3",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN4",
+    "name": "Senegal 4",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN5",
+    "name": "Senegal 5",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN6",
+    "name": "Senegal 6",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN7",
+    "name": "Senegal 7",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN8",
+    "name": "Senegal 8",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN9",
+    "name": "Senegal 9",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN10",
+    "name": "Senegal 10",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN11",
+    "name": "Senegal 11",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN12",
+    "name": "Senegal 12",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN13",
+    "name": "Senegal 13",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN14",
+    "name": "Senegal 14",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN15",
+    "name": "Senegal 15",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN16",
+    "name": "Senegal 16",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN17",
+    "name": "Senegal 17",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN18",
+    "name": "Senegal 18",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN19",
+    "name": "Senegal 19",
+    "set": "Senegal"
+  },
+  {
+    "id": "SEN20",
+    "name": "Senegal 20",
+    "set": "Senegal"
+  },
+  {
+    "id": "IRQ1",
+    "name": "Iraq 1",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ2",
+    "name": "Iraq 2",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ3",
+    "name": "Iraq 3",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ4",
+    "name": "Iraq 4",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ5",
+    "name": "Iraq 5",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ6",
+    "name": "Iraq 6",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ7",
+    "name": "Iraq 7",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ8",
+    "name": "Iraq 8",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ9",
+    "name": "Iraq 9",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ10",
+    "name": "Iraq 10",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ11",
+    "name": "Iraq 11",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ12",
+    "name": "Iraq 12",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ13",
+    "name": "Iraq 13",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ14",
+    "name": "Iraq 14",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ15",
+    "name": "Iraq 15",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ16",
+    "name": "Iraq 16",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ17",
+    "name": "Iraq 17",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ18",
+    "name": "Iraq 18",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ19",
+    "name": "Iraq 19",
+    "set": "Iraq"
+  },
+  {
+    "id": "IRQ20",
+    "name": "Iraq 20",
+    "set": "Iraq"
+  },
+  {
+    "id": "NOR1",
+    "name": "Norway 1",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR2",
+    "name": "Norway 2",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR3",
+    "name": "Norway 3",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR4",
+    "name": "Norway 4",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR5",
+    "name": "Norway 5",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR6",
+    "name": "Norway 6",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR7",
+    "name": "Norway 7",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR8",
+    "name": "Norway 8",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR9",
+    "name": "Norway 9",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR10",
+    "name": "Norway 10",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR11",
+    "name": "Norway 11",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR12",
+    "name": "Norway 12",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR13",
+    "name": "Norway 13",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR14",
+    "name": "Norway 14",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR15",
+    "name": "Norway 15",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR16",
+    "name": "Norway 16",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR17",
+    "name": "Norway 17",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR18",
+    "name": "Norway 18",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR19",
+    "name": "Norway 19",
+    "set": "Norway"
+  },
+  {
+    "id": "NOR20",
+    "name": "Norway 20",
+    "set": "Norway"
+  },
+  {
+    "id": "ARG1",
+    "name": "Argentina 1",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG2",
+    "name": "Argentina 2",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG3",
+    "name": "Argentina 3",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG4",
+    "name": "Argentina 4",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG5",
+    "name": "Argentina 5",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG6",
+    "name": "Argentina 6",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG7",
+    "name": "Argentina 7",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG8",
+    "name": "Argentina 8",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG9",
+    "name": "Argentina 9",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG10",
+    "name": "Argentina 10",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG11",
+    "name": "Argentina 11",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG12",
+    "name": "Argentina 12",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG13",
+    "name": "Argentina 13",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG14",
+    "name": "Argentina 14",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG15",
+    "name": "Argentina 15",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG16",
+    "name": "Argentina 16",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG17",
+    "name": "Argentina 17",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG18",
+    "name": "Argentina 18",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG19",
+    "name": "Argentina 19",
+    "set": "Argentina"
+  },
+  {
+    "id": "ARG20",
+    "name": "Argentina 20",
+    "set": "Argentina"
+  },
+  {
+    "id": "ALG1",
+    "name": "Algeria 1",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG2",
+    "name": "Algeria 2",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG3",
+    "name": "Algeria 3",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG4",
+    "name": "Algeria 4",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG5",
+    "name": "Algeria 5",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG6",
+    "name": "Algeria 6",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG7",
+    "name": "Algeria 7",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG8",
+    "name": "Algeria 8",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG9",
+    "name": "Algeria 9",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG10",
+    "name": "Algeria 10",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG11",
+    "name": "Algeria 11",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG12",
+    "name": "Algeria 12",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG13",
+    "name": "Algeria 13",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG14",
+    "name": "Algeria 14",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG15",
+    "name": "Algeria 15",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG16",
+    "name": "Algeria 16",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG17",
+    "name": "Algeria 17",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG18",
+    "name": "Algeria 18",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG19",
+    "name": "Algeria 19",
+    "set": "Algeria"
+  },
+  {
+    "id": "ALG20",
+    "name": "Algeria 20",
+    "set": "Algeria"
+  },
+  {
+    "id": "AUT1",
+    "name": "Austria 1",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT2",
+    "name": "Austria 2",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT3",
+    "name": "Austria 3",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT4",
+    "name": "Austria 4",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT5",
+    "name": "Austria 5",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT6",
+    "name": "Austria 6",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT7",
+    "name": "Austria 7",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT8",
+    "name": "Austria 8",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT9",
+    "name": "Austria 9",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT10",
+    "name": "Austria 10",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT11",
+    "name": "Austria 11",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT12",
+    "name": "Austria 12",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT13",
+    "name": "Austria 13",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT14",
+    "name": "Austria 14",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT15",
+    "name": "Austria 15",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT16",
+    "name": "Austria 16",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT17",
+    "name": "Austria 17",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT18",
+    "name": "Austria 18",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT19",
+    "name": "Austria 19",
+    "set": "Austria"
+  },
+  {
+    "id": "AUT20",
+    "name": "Austria 20",
+    "set": "Austria"
+  },
+  {
+    "id": "JOR1",
+    "name": "Jordan 1",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR2",
+    "name": "Jordan 2",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR3",
+    "name": "Jordan 3",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR4",
+    "name": "Jordan 4",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR5",
+    "name": "Jordan 5",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR6",
+    "name": "Jordan 6",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR7",
+    "name": "Jordan 7",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR8",
+    "name": "Jordan 8",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR9",
+    "name": "Jordan 9",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR10",
+    "name": "Jordan 10",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR11",
+    "name": "Jordan 11",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR12",
+    "name": "Jordan 12",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR13",
+    "name": "Jordan 13",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR14",
+    "name": "Jordan 14",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR15",
+    "name": "Jordan 15",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR16",
+    "name": "Jordan 16",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR17",
+    "name": "Jordan 17",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR18",
+    "name": "Jordan 18",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR19",
+    "name": "Jordan 19",
+    "set": "Jordan"
+  },
+  {
+    "id": "JOR20",
+    "name": "Jordan 20",
+    "set": "Jordan"
+  },
+  {
+    "id": "POR1",
+    "name": "Portugal 1",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR2",
+    "name": "Portugal 2",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR3",
+    "name": "Portugal 3",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR4",
+    "name": "Portugal 4",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR5",
+    "name": "Portugal 5",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR6",
+    "name": "Portugal 6",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR7",
+    "name": "Portugal 7",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR8",
+    "name": "Portugal 8",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR9",
+    "name": "Portugal 9",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR10",
+    "name": "Portugal 10",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR11",
+    "name": "Portugal 11",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR12",
+    "name": "Portugal 12",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR13",
+    "name": "Portugal 13",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR14",
+    "name": "Portugal 14",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR15",
+    "name": "Portugal 15",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR16",
+    "name": "Portugal 16",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR17",
+    "name": "Portugal 17",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR18",
+    "name": "Portugal 18",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR19",
+    "name": "Portugal 19",
+    "set": "Portugal"
+  },
+  {
+    "id": "POR20",
+    "name": "Portugal 20",
+    "set": "Portugal"
+  },
+  {
+    "id": "COD1",
+    "name": "DR Congo 1",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD2",
+    "name": "DR Congo 2",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD3",
+    "name": "DR Congo 3",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD4",
+    "name": "DR Congo 4",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD5",
+    "name": "DR Congo 5",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD6",
+    "name": "DR Congo 6",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD7",
+    "name": "DR Congo 7",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD8",
+    "name": "DR Congo 8",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD9",
+    "name": "DR Congo 9",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD10",
+    "name": "DR Congo 10",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD11",
+    "name": "DR Congo 11",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD12",
+    "name": "DR Congo 12",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD13",
+    "name": "DR Congo 13",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD14",
+    "name": "DR Congo 14",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD15",
+    "name": "DR Congo 15",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD16",
+    "name": "DR Congo 16",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD17",
+    "name": "DR Congo 17",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD18",
+    "name": "DR Congo 18",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD19",
+    "name": "DR Congo 19",
+    "set": "DR Congo"
+  },
+  {
+    "id": "COD20",
+    "name": "DR Congo 20",
+    "set": "DR Congo"
+  },
+  {
+    "id": "UZB1",
+    "name": "Uzbekistan 1",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB2",
+    "name": "Uzbekistan 2",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB3",
+    "name": "Uzbekistan 3",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB4",
+    "name": "Uzbekistan 4",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB5",
+    "name": "Uzbekistan 5",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB6",
+    "name": "Uzbekistan 6",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB7",
+    "name": "Uzbekistan 7",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB8",
+    "name": "Uzbekistan 8",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB9",
+    "name": "Uzbekistan 9",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB10",
+    "name": "Uzbekistan 10",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB11",
+    "name": "Uzbekistan 11",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB12",
+    "name": "Uzbekistan 12",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB13",
+    "name": "Uzbekistan 13",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB14",
+    "name": "Uzbekistan 14",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB15",
+    "name": "Uzbekistan 15",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB16",
+    "name": "Uzbekistan 16",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB17",
+    "name": "Uzbekistan 17",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB18",
+    "name": "Uzbekistan 18",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB19",
+    "name": "Uzbekistan 19",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "UZB20",
+    "name": "Uzbekistan 20",
+    "set": "Uzbekistan"
+  },
+  {
+    "id": "COL1",
+    "name": "Colombia 1",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL2",
+    "name": "Colombia 2",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL3",
+    "name": "Colombia 3",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL4",
+    "name": "Colombia 4",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL5",
+    "name": "Colombia 5",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL6",
+    "name": "Colombia 6",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL7",
+    "name": "Colombia 7",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL8",
+    "name": "Colombia 8",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL9",
+    "name": "Colombia 9",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL10",
+    "name": "Colombia 10",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL11",
+    "name": "Colombia 11",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL12",
+    "name": "Colombia 12",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL13",
+    "name": "Colombia 13",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL14",
+    "name": "Colombia 14",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL15",
+    "name": "Colombia 15",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL16",
+    "name": "Colombia 16",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL17",
+    "name": "Colombia 17",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL18",
+    "name": "Colombia 18",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL19",
+    "name": "Colombia 19",
+    "set": "Colombia"
+  },
+  {
+    "id": "COL20",
+    "name": "Colombia 20",
+    "set": "Colombia"
+  },
+  {
+    "id": "ENG1",
+    "name": "England 1",
+    "set": "England"
+  },
+  {
+    "id": "ENG2",
+    "name": "England 2",
+    "set": "England"
+  },
+  {
+    "id": "ENG3",
+    "name": "England 3",
+    "set": "England"
+  },
+  {
+    "id": "ENG4",
+    "name": "England 4",
+    "set": "England"
+  },
+  {
+    "id": "ENG5",
+    "name": "England 5",
+    "set": "England"
+  },
+  {
+    "id": "ENG6",
+    "name": "England 6",
+    "set": "England"
+  },
+  {
+    "id": "ENG7",
+    "name": "England 7",
+    "set": "England"
+  },
+  {
+    "id": "ENG8",
+    "name": "England 8",
+    "set": "England"
+  },
+  {
+    "id": "ENG9",
+    "name": "England 9",
+    "set": "England"
+  },
+  {
+    "id": "ENG10",
+    "name": "England 10",
+    "set": "England"
+  },
+  {
+    "id": "ENG11",
+    "name": "England 11",
+    "set": "England"
+  },
+  {
+    "id": "ENG12",
+    "name": "England 12",
+    "set": "England"
+  },
+  {
+    "id": "ENG13",
+    "name": "England 13",
+    "set": "England"
+  },
+  {
+    "id": "ENG14",
+    "name": "England 14",
+    "set": "England"
+  },
+  {
+    "id": "ENG15",
+    "name": "England 15",
+    "set": "England"
+  },
+  {
+    "id": "ENG16",
+    "name": "England 16",
+    "set": "England"
+  },
+  {
+    "id": "ENG17",
+    "name": "England 17",
+    "set": "England"
+  },
+  {
+    "id": "ENG18",
+    "name": "England 18",
+    "set": "England"
+  },
+  {
+    "id": "ENG19",
+    "name": "England 19",
+    "set": "England"
+  },
+  {
+    "id": "ENG20",
+    "name": "England 20",
+    "set": "England"
+  },
+  {
+    "id": "CRO1",
+    "name": "Croatia 1",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO2",
+    "name": "Croatia 2",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO3",
+    "name": "Croatia 3",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO4",
+    "name": "Croatia 4",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO5",
+    "name": "Croatia 5",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO6",
+    "name": "Croatia 6",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO7",
+    "name": "Croatia 7",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO8",
+    "name": "Croatia 8",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO9",
+    "name": "Croatia 9",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO10",
+    "name": "Croatia 10",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO11",
+    "name": "Croatia 11",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO12",
+    "name": "Croatia 12",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO13",
+    "name": "Croatia 13",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO14",
+    "name": "Croatia 14",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO15",
+    "name": "Croatia 15",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO16",
+    "name": "Croatia 16",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO17",
+    "name": "Croatia 17",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO18",
+    "name": "Croatia 18",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO19",
+    "name": "Croatia 19",
+    "set": "Croatia"
+  },
+  {
+    "id": "CRO20",
+    "name": "Croatia 20",
+    "set": "Croatia"
+  },
+  {
+    "id": "GHA1",
+    "name": "Ghana 1",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA2",
+    "name": "Ghana 2",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA3",
+    "name": "Ghana 3",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA4",
+    "name": "Ghana 4",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA5",
+    "name": "Ghana 5",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA6",
+    "name": "Ghana 6",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA7",
+    "name": "Ghana 7",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA8",
+    "name": "Ghana 8",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA9",
+    "name": "Ghana 9",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA10",
+    "name": "Ghana 10",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA11",
+    "name": "Ghana 11",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA12",
+    "name": "Ghana 12",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA13",
+    "name": "Ghana 13",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA14",
+    "name": "Ghana 14",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA15",
+    "name": "Ghana 15",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA16",
+    "name": "Ghana 16",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA17",
+    "name": "Ghana 17",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA18",
+    "name": "Ghana 18",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA19",
+    "name": "Ghana 19",
+    "set": "Ghana"
+  },
+  {
+    "id": "GHA20",
+    "name": "Ghana 20",
+    "set": "Ghana"
+  },
+  {
+    "id": "PAN1",
+    "name": "Panama 1",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN2",
+    "name": "Panama 2",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN3",
+    "name": "Panama 3",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN4",
+    "name": "Panama 4",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN5",
+    "name": "Panama 5",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN6",
+    "name": "Panama 6",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN7",
+    "name": "Panama 7",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN8",
+    "name": "Panama 8",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN9",
+    "name": "Panama 9",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN10",
+    "name": "Panama 10",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN11",
+    "name": "Panama 11",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN12",
+    "name": "Panama 12",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN13",
+    "name": "Panama 13",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN14",
+    "name": "Panama 14",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN15",
+    "name": "Panama 15",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN16",
+    "name": "Panama 16",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN17",
+    "name": "Panama 17",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN18",
+    "name": "Panama 18",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN19",
+    "name": "Panama 19",
+    "set": "Panama"
+  },
+  {
+    "id": "PAN20",
+    "name": "Panama 20",
+    "set": "Panama"
+  },
+  {
+    "id": "FWC9",
+    "name": "FIFA World Cup 9",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC10",
+    "name": "FIFA World Cup 10",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC11",
+    "name": "FIFA World Cup 11",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC12",
+    "name": "FIFA World Cup 12",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC13",
+    "name": "FIFA World Cup 13",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC14",
+    "name": "FIFA World Cup 14",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC15",
+    "name": "FIFA World Cup 15",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC16",
+    "name": "FIFA World Cup 16",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC17",
+    "name": "FIFA World Cup 17",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC18",
+    "name": "FIFA World Cup 18",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "FWC19",
+    "name": "FIFA World Cup 19",
+    "set": "FIFA World Cup"
+  },
+  {
+    "id": "CC-1",
+    "set": "Special"
+  },
+  {
+    "id": "CC-2",
+    "set": "Special"
+  },
+  {
+    "id": "CC-3",
+    "set": "Special"
+  },
+  {
+    "id": "CC-4",
+    "set": "Special"
+  },
+  {
+    "id": "CC-5",
+    "set": "Special"
+  },
+  {
+    "id": "CC-6",
+    "set": "Special"
+  },
+  {
+    "id": "CC-7",
+    "set": "Special"
+  },
+  {
+    "id": "CC-8",
+    "set": "Special"
+  },
+  {
+    "id": "CC-9",
+    "set": "Special"
+  },
+  {
+    "id": "CC-10",
+    "set": "Special"
+  },
+  {
+    "id": "CC-11",
+    "set": "Special"
+  },
+  {
+    "id": "CC-12",
+    "set": "Special"
+  }
+]
