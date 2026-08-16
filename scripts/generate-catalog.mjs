@@ -44,9 +44,8 @@ const dupes = parseReport('duplicate-stickers.html');
 // Team code → full name (both reports agree; prefer missing, fall back to dupes)
 const NAMES = { ...dupes.names, ...missing.names };
 
-// Prefer full, unabbreviated names over the report's shorthand, and name
-// groups the reports don't cover (CC = Coca-Cola promo stickers).
-const NAME_OVERRIDES = { KOR: 'Korea, Republic of', CC: 'Coca-Cola' };
+// Name groups the reports don't cover (CC = Coca-Cola promo stickers).
+const NAME_OVERRIDES = { CC: 'Coca-Cola' };
 Object.assign(NAMES, NAME_OVERRIDES);
 
 // Stickers owned but absent from the missing/duplicate reports (the reports
