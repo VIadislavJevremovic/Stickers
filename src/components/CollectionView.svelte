@@ -150,11 +150,14 @@
           >
             {#if s.set === 'Special' || !codeOf(s.id)}
               <span class="cid">{s.id}</span>
+              {#if s.count >= 2}<span class="dupe">+{s.count - 1}</span>{/if}
             {:else}
-              <span class="ccode">{codeOf(s.id)}</span>
+              <div class="ctop">
+                <span class="ccode">{codeOf(s.id)}</span>
+                {#if s.count >= 2}<span class="dupe">+{s.count - 1}</span>{/if}
+              </div>
               <span class="cnum">{numOf(s.id)}</span>
             {/if}
-            {#if s.count >= 2}<span class="dupe">+{s.count - 1}</span>{/if}
           </button>
         {/each}
       </div>
@@ -257,10 +260,12 @@
     padding: 2px;
   }
   .cid { font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; }
-  .ccode {
-    position: absolute; top: 5px; left: 7px;
-    font-size: 10px; font-weight: 700; letter-spacing: 0.02em; opacity: 0.8;
+  .ctop {
+    position: absolute; top: 4px; left: 6px; right: 6px;
+    display: flex; align-items: center; justify-content: space-between; gap: 4px;
   }
+  .ccode { font-size: 10px; font-weight: 700; letter-spacing: 0.02em; opacity: 0.8; }
+  .ctop .dupe { position: static; }
   .cnum { font-size: 21px; font-weight: 700; font-variant-numeric: tabular-nums; }
   .cell.have { background: var(--have); border-color: var(--have); color: #fff; }
   .cell.spare { background: var(--spare); border-color: var(--spare); color: #fff; }
