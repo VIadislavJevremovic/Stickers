@@ -6,6 +6,6 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 // so `base` MUST be "/<repo>/". Change this to match your repo name.
 // (For a *user* site at <user>.github.io, set base to "/".)
 export default defineConfig({
-  base: '/sticker-tracker/',
+  base: '/Stickers/',
   plugins: [svelte()],
 });
