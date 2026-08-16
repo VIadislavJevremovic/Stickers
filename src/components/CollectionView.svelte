@@ -5,7 +5,11 @@
   let filter = 'all';       // all | missing | have | spares
   let query = '';
   let setFilter = 'all';
+  let sortMode = 'group';   // group (catalog order) | alpha (A–Z)
   let openId = null;        // sticker whose detail modal is open
+
+  // In alphabetical mode these sets stay pinned to the top, in this order.
+  const PINNED_SETS = ['Special', 'FIFA World Cup'];
 
   // If catalog items carry a `set` field, offer a set filter.
   $: sets = [...new Set($catalog.map((s) => s.set).filter(Boolean))];
@@ -28,7 +32,8 @@
       );
     });
 
-  // Group the visible rows by set, preserving catalog order.
+  // Group the visible rows by set. Default order is catalog order; alpha
+  // mode sorts sets A–Z but keeps the pinned sets (Special, FWC) on top.
   $: groups = (() => {
     const m = new Map();
     for (const s of rows) {
@@ -36,7 +41,20 @@
       if (!m.has(key)) m.set(key, []);
       m.get(key).push(s);
     }
-    return [...m]; // [ [setName, items[]], ... ]
+    const entries = [...m]; // [ [setName, items[]], ... ]
+    if (sortMode === 'alpha') {
+      entries.sort((a, b) => {
+        const ai = PINNED_SETS.indexOf(a[0]);
+        const bi = PINNED_SETS.indexOf(b[0]);
+        if (ai !== -1 || bi !== -1) {
+          if (ai === -1) return 1;   // only b pinned → b first
+          if (bi === -1) return -1;  // only a pinned → a first
+          return ai - bi;            // both pinned → by pinned order
+        }
+        return a[0].localeCompare(b[0]);
+      });
+    }
+    return entries;
   })();
 
   // Per-set have/total, computed across the whole catalog (ignores filters)
@@ -96,6 +114,10 @@
     {/each}
   </div>
   {#if sets.length}
+    <select bind:value={sortMode} aria-label="Sort order">
+      <option value="group">Sort by group</option>
+      <option value="alpha">Sort A–Z</option>
+    </select>
     <select bind:value={setFilter} aria-label="Filter by set">
       <option value="all">All sets</option>
       {#each sets as s}<option value={s}>{s}</option>{/each}

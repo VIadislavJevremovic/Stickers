@@ -44,6 +44,10 @@ const dupes = parseReport('duplicate-stickers.html');
 // Team code → full name (both reports agree; prefer missing, fall back to dupes)
 const NAMES = { ...dupes.names, ...missing.names };
 
+// Prefer full, unabbreviated country names over the report's shorthand.
+const NAME_OVERRIDES = { KOR: 'Korea, Republic of' };
+Object.assign(NAMES, NAME_OVERRIDES);
+
 // ── Split an id like "MEX5", "FWC19", "CC-3", "00" into {code, num} ──────
 function split(id) {
   if (id === '00') return { code: '00', num: null };
