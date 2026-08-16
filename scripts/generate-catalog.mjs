@@ -44,9 +44,17 @@ const dupes = parseReport('duplicate-stickers.html');
 // Team code → full name (both reports agree; prefer missing, fall back to dupes)
 const NAMES = { ...dupes.names, ...missing.names };
 
-// Prefer full, unabbreviated country names over the report's shorthand.
-const NAME_OVERRIDES = { KOR: 'Korea, Republic of' };
+// Prefer full, unabbreviated names over the report's shorthand, and name
+// groups the reports don't cover (CC = Coca-Cola promo stickers).
+const NAME_OVERRIDES = { KOR: 'Korea, Republic of', CC: 'Coca-Cola' };
 Object.assign(NAMES, NAME_OVERRIDES);
+
+// Stickers owned but absent from the missing/duplicate reports (the reports
+// only cover teams + FWC). Seeded as count 1 (owned, no spare).
+const OWNED_EXTRAS = new Set([
+  '00',
+  ...Array.from({ length: 12 }, (_, i) => `CC-${i + 1}`),
+]);
 
 // ── Split an id like "MEX5", "FWC19", "CC-3", "00" into {code, num} ──────
 function split(id) {
@@ -88,6 +96,10 @@ const unknown = [];
 
 for (const id of ids) {
   const { code, num } = split(id);
+  if (OWNED_EXTRAS.has(id)) {
+    collection[id] = 1;
+    continue;
+  }
   if (!covered.has(code) || num == null) {
     unknown.push(id);
     continue;

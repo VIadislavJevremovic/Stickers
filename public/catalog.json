@@ -4900,50 +4900,62 @@
   },
   {
     "id": "CC-1",
-    "set": "Special"
+    "name": "Coca-Cola 1",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-2",
-    "set": "Special"
+    "name": "Coca-Cola 2",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-3",
-    "set": "Special"
+    "name": "Coca-Cola 3",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-4",
-    "set": "Special"
+    "name": "Coca-Cola 4",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-5",
-    "set": "Special"
+    "name": "Coca-Cola 5",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-6",
-    "set": "Special"
+    "name": "Coca-Cola 6",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-7",
-    "set": "Special"
+    "name": "Coca-Cola 7",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-8",
-    "set": "Special"
+    "name": "Coca-Cola 8",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-9",
-    "set": "Special"
+    "name": "Coca-Cola 9",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-10",
-    "set": "Special"
+    "name": "Coca-Cola 10",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-11",
-    "set": "Special"
+    "name": "Coca-Cola 11",
+    "set": "Coca-Cola"
   },
   {
     "id": "CC-12",
-    "set": "Special"
+    "name": "Coca-Cola 12",
+    "set": "Coca-Cola"
   }
 ]

@@ -9,7 +9,7 @@
   let openId = null;        // sticker whose detail modal is open
 
   // In alphabetical mode these sets stay pinned to the top, in this order.
-  const PINNED_SETS = ['Special', 'FIFA World Cup'];
+  const PINNED_SETS = ['Special', 'FIFA World Cup', 'Coca-Cola'];
 
   // If catalog items carry a `set` field, offer a set filter.
   $: sets = [...new Set($catalog.map((s) => s.set).filter(Boolean))];
