@@ -69,8 +69,12 @@
     return 'have';
   }
 
+  function closeModal() {
+    openId = null;
+  }
+
   function onKey(e) {
-    if (e.key === 'Escape') openId = null;
+    if (e.key === 'Escape') closeModal();
   }
 </script>
 
@@ -127,20 +131,21 @@
 {/if}
 
 {#if openItem}
-  <div
-    class="backdrop"
-    on:click={() => (openId = null)}
-    transition:fade={{ duration: 120 }}
-  >
+  <div class="overlay">
+    <button
+      class="backdrop"
+      on:click={closeModal}
+      aria-label="Close dialog"
+      transition:fade={{ duration: 120 }}
+    ></button>
     <div
       class="modal card"
       role="dialog"
       aria-modal="true"
       aria-label={openItem.name || 'Sticker ' + openItem.id}
-      on:click|stopPropagation
       transition:scale={{ duration: 140, start: 0.94 }}
     >
-      <button class="close" on:click={() => (openId = null)} aria-label="Close">✕</button>
+      <button class="close" on:click={closeModal} aria-label="Close">✕</button>
 
       <div class="mtag {stateClass(openCount)}">{openItem.id}</div>
       <p class="mname">{openItem.set || openItem.name || 'Sticker ' + openItem.id}</p>
@@ -225,13 +230,17 @@
   .empty { color: var(--muted); text-align: center; padding: 28px; }
 
   /* ── Detail modal ── */
-  .backdrop {
+  .overlay {
     position: fixed; inset: 0; z-index: 50;
-    background: rgba(9, 14, 20, 0.55);
     display: grid; place-items: center; padding: 20px;
   }
+  .backdrop {
+    position: absolute; inset: 0; z-index: 0;
+    border: 0; padding: 0; cursor: default;
+    background: rgba(9, 14, 20, 0.55);
+  }
   .modal {
-    position: relative; width: 100%; max-width: 300px;
+    position: relative; z-index: 1; width: 100%; max-width: 300px;
     padding: 22px 20px 20px; text-align: center;
   }
   .close {

@@ -99,8 +99,8 @@
 {:else}
   <!-- Live session -->
   <div class="partner card">
-    <label>Trading with</label>
-    <input value={$session.partner} on:input={(e) => setPartner(e.target.value)} placeholder="name / label" />
+    <label for="partner-name">Trading with</label>
+    <input id="partner-name" value={$session.partner} on:input={(e) => setPartner(e.target.value)} placeholder="name / label" />
   </div>
 
   <!-- Balance ledger — the running tally that nudges you to equalize -->
