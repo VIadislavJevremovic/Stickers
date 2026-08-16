@@ -27,7 +27,8 @@
       msg = result.error;
     } else if (confirm('Replace your current collection with the imported one?')) {
       collection.set(result.collection);
-      msg = 'Imported.';
+      msg = '';
+      open = false; // dismiss the Backup menu on a successful import
     }
     fileInput.value = '';
   }
