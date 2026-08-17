@@ -16,6 +16,30 @@
 
   --radius: 14px;
   --shadow: 0 1px 2px rgba(23, 34, 46, 0.06), 0 4px 16px rgba(23, 34, 46, 0.05);
+
+  /* Let native controls (inputs, selects, scrollbars) follow the theme. */
+  color-scheme: light dark;
+}
+
+/* Dark theme — mirrors the semantic palette on dark surfaces. */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0d0f12;
+    --surface: #171b20;
+    --surface-2: #1f252c;
+    --border: #2b333c;
+    --ink: #e8edf2;
+    --muted: #97a3ad;
+
+    --have: #35a07a;      /* owned */
+    --spare: #e0a52e;     /* duplicates / givable */
+    --miss: #d15870;      /* missing */
+
+    --give: #cf7d55;      /* outgoing in a swap */
+    --get: #35a07a;       /* incoming in a swap */
+
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.4), 0 6px 20px rgba(0, 0, 0, 0.35);
+  }
 }
 
 * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }

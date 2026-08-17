@@ -4,6 +4,7 @@
     startSession, setPartner, stage, commitSession, cancelSession,
   } from '../lib/stores.js';
   import AddPicker from './AddPicker.svelte';
+  import { tap } from '../lib/haptics.js';
 
   let picker = null; // 'give' | 'get' | null
   let partnerInput = '';
@@ -134,9 +135,9 @@
             <span class="lid">{id}</span>
             <span class="lname">{nameOf(id)}</span>
             <div class="stepper">
-              <button on:click={() => stage('outgoing', id, -1)} aria-label="Give one less">−</button>
+              <button on:click={() => { tap(); stage('outgoing', id, -1); }} aria-label="Give one less">−</button>
               <span class="n">{qty}</span>
-              <button on:click={() => stage('outgoing', id, +1)}
+              <button on:click={() => { tap(); stage('outgoing', id, +1); }}
                 disabled={qty >= (($collection[id] || 0) - 1)} aria-label="Give one more">+</button>
             </div>
           </div>
@@ -162,9 +163,9 @@
             <span class="lid" class:fills={!($collection[id] > 0)}>{id}</span>
             <span class="lname">{nameOf(id)}</span>
             <div class="stepper">
-              <button on:click={() => stage('incoming', id, -1)} aria-label="Get one less">−</button>
+              <button on:click={() => { tap(); stage('incoming', id, -1); }} aria-label="Get one less">−</button>
               <span class="n">{qty}</span>
-              <button on:click={() => stage('incoming', id, +1)} aria-label="Get one more">+</button>
+              <button on:click={() => { tap(); stage('incoming', id, +1); }} aria-label="Get one more">+</button>
             </div>
           </div>
         {/each}

@@ -1,5 +1,6 @@
 <script>
   import { catalog, collection, adjust, setCount } from '../lib/stores.js';
+  import { tap } from '../lib/haptics.js';
   import { fade, scale } from 'svelte/transition';
 
   let filter = 'all';       // all | missing | have | spares
@@ -11,8 +12,24 @@
   // In alphabetical mode these sets stay pinned to the top, in this order.
   const PINNED_SETS = ['Special', 'FIFA World Cup', 'Coca-Cola'];
 
-  // If catalog items carry a `set` field, offer a set filter.
-  $: sets = [...new Set($catalog.map((s) => s.set).filter(Boolean))];
+  // Order two set names per the given mode: catalog order (0 = keep as-is)
+  // or A–Z with the pinned sets held on top. `mode` is passed in (rather
+  // than read from the closure) so reactive statements track it as a dep.
+  function setCmp(a, b, mode) {
+    if (mode !== 'alpha') return 0;
+    const ai = PINNED_SETS.indexOf(a);
+    const bi = PINNED_SETS.indexOf(b);
+    if (ai !== -1 || bi !== -1) {
+      if (ai === -1) return 1;
+      if (bi === -1) return -1;
+      return ai - bi;
+    }
+    return a.localeCompare(b);
+  }
+
+  // Sets for the filter dropdown, ordered to match the section order.
+  $: sets = [...new Set($catalog.map((s) => s.set).filter(Boolean))]
+    .sort((a, b) => setCmp(a, b, sortMode));
 
   $: rows = $catalog
     .map((s) => ({ ...s, count: $collection[s.id] || 0 }))
@@ -42,18 +59,7 @@
       m.get(key).push(s);
     }
     const entries = [...m]; // [ [setName, items[]], ... ]
-    if (sortMode === 'alpha') {
-      entries.sort((a, b) => {
-        const ai = PINNED_SETS.indexOf(a[0]);
-        const bi = PINNED_SETS.indexOf(b[0]);
-        if (ai !== -1 || bi !== -1) {
-          if (ai === -1) return 1;   // only b pinned → b first
-          if (bi === -1) return -1;  // only a pinned → a first
-          return ai - bi;            // both pinned → by pinned order
-        }
-        return a[0].localeCompare(b[0]);
-      });
-    }
+    entries.sort((a, b) => setCmp(a[0], b[0], sortMode));
     return entries;
   })();
 
@@ -185,7 +191,7 @@
     >
       <button
         class="override"
-        on:click={() => setCount(openItem.id, 0)}
+        on:click={() => { tap(); setCount(openItem.id, 0); }}
         disabled={openCount === 0}
         aria-label="Revert to not owned"
         title="Revert to not owned"
@@ -202,9 +208,9 @@
       </p>
 
       <div class="stepper big">
-        <button on:click={() => adjust(openItem.id, -1)} disabled={openCount <= 1} aria-label="Remove one spare">−</button>
+        <button on:click={() => { tap(); adjust(openItem.id, -1); }} disabled={openCount <= 1} aria-label="Remove one spare">−</button>
         <span class="n">{openCount}</span>
-        <button on:click={() => adjust(openItem.id, +1)} aria-label="Add one">+</button>
+        <button on:click={() => { tap(); adjust(openItem.id, +1); }} aria-label="Add one">+</button>
       </div>
     </div>
   </div>

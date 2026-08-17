@@ -1,6 +1,6 @@
 // Minimal offline cache. Bump CACHE when you deploy changes so clients
 // pick up the new build.
-const CACHE = 'sticker-tracker-v1';
+const CACHE = 'sticker-tracker-v2';
 
 // Cache the app shell on install. Vite fingerprints JS/CSS filenames, so we
 // let those fill the cache at runtime rather than listing them here.
