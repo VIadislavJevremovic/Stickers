@@ -8,7 +8,6 @@ import {
   adjust,
   stage,
   startSession,
-  setPartner,
   commitSession,
   cancelSession,
   exportData,
@@ -88,7 +87,7 @@ describe('stage (swap staging)', () => {
 describe('commitSession', () => {
   it('applies incoming (adds) and outgoing (removes spares)', () => {
     collection.set({ A: 3, B: 1 });
-    startSession('Sam');
+    startSession();
     stage('outgoing', 'A', 2); // give 2 of 3 -> 1 left
     stage('incoming', 'C', 1); // receive a new one
     commitSession();
@@ -108,14 +107,13 @@ describe('commitSession', () => {
 
   it('logs the trade to history and clears the session', () => {
     collection.set({ A: 2 });
-    startSession('Alex');
+    startSession();
     stage('outgoing', 'A', 1);
     stage('incoming', 'Z', 1);
     commitSession();
 
     const h = get(history);
     expect(h).toHaveLength(1);
-    expect(h[0].partner).toBe('Alex');
     expect(h[0].gave).toEqual({ A: 1 });
     expect(h[0].got).toEqual({ Z: 1 });
 
@@ -126,7 +124,7 @@ describe('commitSession', () => {
   });
 
   it('does not log history for an empty commit', () => {
-    startSession('Nobody');
+    startSession();
     commitSession();
     expect(get(history)).toHaveLength(0);
   });
@@ -134,18 +132,37 @@ describe('commitSession', () => {
 
 describe('session lifecycle', () => {
   it('starts and cancels a session', () => {
-    startSession('Pat');
-    let s = get(session);
-    expect(s.active).toBe(true);
-    expect(s.partner).toBe('Pat');
-
-    setPartner('Robin');
-    expect(get(session).partner).toBe('Robin');
+    startSession();
+    expect(get(session).active).toBe(true);
 
     cancelSession();
-    s = get(session);
-    expect(s.active).toBe(false);
-    expect(s.partner).toBe('');
+    expect(get(session).active).toBe(false);
+  });
+});
+
+describe('stale-give pruning', () => {
+  it('drops a staged give when the sticker is reverted to missing', () => {
+    collection.set({ A: 2 });
+    startSession();
+    stage('outgoing', 'A', 1);
+    setCount('A', 0); // revert / no longer owned
+    expect(get(session).outgoing.A).toBeUndefined();
+  });
+
+  it('drops a staged give when the last spare is stepped away', () => {
+    collection.set({ A: 2 });
+    startSession();
+    stage('outgoing', 'A', 1);
+    adjust('A', -1); // 2 -> 1, no spare left
+    expect(get(session).outgoing.A).toBeUndefined();
+  });
+
+  it('keeps a staged give while a spare remains', () => {
+    collection.set({ A: 3 });
+    startSession();
+    stage('outgoing', 'A', 1);
+    adjust('A', -1); // 3 -> 2, still a spare
+    expect(get(session).outgoing.A).toBe(1);
   });
 });
 
@@ -172,6 +189,11 @@ describe('parseImport', () => {
 
   it('rejects a JSON array', () => {
     expect(parseImport(JSON.stringify([1, 2, 3])).ok).toBe(false);
+  });
+
+  it('rejects a JSON object with no valid counts (would wipe the collection)', () => {
+    expect(parseImport(JSON.stringify({ foo: 'bar' })).ok).toBe(false);
+    expect(parseImport(JSON.stringify({})).ok).toBe(false);
   });
 });
 

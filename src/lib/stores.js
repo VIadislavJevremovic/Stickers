@@ -1,4 +1,4 @@
-import { writable } from 'svelte/store';
+import { writable, get } from 'svelte/store';
 import { persisted } from './persist.js';
 
 // ── Reference data ──────────────────────────────────────────────────────
@@ -27,6 +27,7 @@ export function setCount(id, count) {
     else next[id] = count;
     return next;
   });
+  dropStaleGive(id);
 }
 
 // Nudge a count up or down. Used by the +/- steppers everywhere.
@@ -43,6 +44,7 @@ export function adjust(id, delta) {
     else next[id] = v;
     return next;
   });
+  dropStaleGive(id);
 }
 
 // ── The live swap session (staging area) ────────────────────────────────
@@ -52,7 +54,6 @@ export function adjust(id, delta) {
 //   outgoing / incoming: maps of { [stickerId]: qty }
 const emptySession = () => ({
   active: false,
-  partner: '',
   outgoing: {},
   incoming: {},
   startedAt: null,
@@ -60,12 +61,8 @@ const emptySession = () => ({
 
 export const session = persisted('stickers.session.v1', emptySession());
 
-export function startSession(partner = '') {
-  session.set({ ...emptySession(), active: true, partner, startedAt: Date.now() });
-}
-
-export function setPartner(name) {
-  session.update((s) => ({ ...s, partner: name }));
+export function startSession() {
+  session.set({ ...emptySession(), active: true, startedAt: Date.now() });
 }
 
 // side is 'outgoing' (giving) or 'incoming' (getting).
@@ -76,6 +73,19 @@ export function stage(side, id, delta) {
     if (v <= 0) delete bag[id];
     else bag[id] = v;
     return { ...s, [side]: bag };
+  });
+}
+
+// Drop a sticker from the Giving side once it no longer has a spare (e.g. you
+// reverted it to missing, or stepped it down). Keeps the ledger/badge/history
+// honest — you can only give spares you actually own.
+function dropStaleGive(id) {
+  if ((get(collection)[id] || 0) >= 2) return;
+  session.update((s) => {
+    if (!s.outgoing[id]) return s;
+    const outgoing = { ...s.outgoing };
+    delete outgoing[id];
+    return { ...s, outgoing };
   });
 }
 
@@ -102,7 +112,6 @@ export function commitSession() {
     if (Object.keys(s.outgoing).length || Object.keys(s.incoming).length) {
       history.update((h) => [
         {
-          partner: s.partner,
           when: Date.now(),
           gave: s.outgoing,
           got: s.incoming,
@@ -140,6 +149,9 @@ export function parseImport(text) {
     for (const [id, count] of Object.entries(coll)) {
       const n = Math.floor(Number(count));
       if (Number.isFinite(n) && n > 0) clean[id] = n;
+    }
+    if (Object.keys(clean).length === 0) {
+      return { ok: false, error: "That file doesn't contain any sticker counts." };
     }
     return { ok: true, collection: clean };
   } catch (_) {

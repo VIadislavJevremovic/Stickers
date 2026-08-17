@@ -48,8 +48,8 @@
   </button>
   <button class:active={tab === 'swap'} on:click={() => (tab = 'swap')}>
     Swap
-    {#if giveTotal > 0}<span class="tabbadge give">{giveTotal}</span>{/if}
-    {#if getTotal > 0}<span class="tabbadge get">{getTotal}</span>{/if}
+    {#if giveTotal > 0}<span class="tabbadge give">{giveTotal}<span class="sr-only"> giving</span></span>{/if}
+    {#if getTotal > 0}<span class="tabbadge get">{getTotal}<span class="sr-only"> getting</span></span>{/if}
   </button>
 </nav>
 

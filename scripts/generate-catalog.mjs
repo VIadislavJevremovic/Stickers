@@ -65,10 +65,9 @@ function split(id) {
   return { code: id, num: null };
 }
 
+// Fallback set for ids whose code isn't a named team (currently just "00").
 const SPECIAL_SET = {
   '00': 'Special',
-  CC: 'Special',
-  FWC: 'FIFA World Cup',
 };
 
 // ── Build catalog.json ──────────────────────────────────────────────────
@@ -107,6 +106,17 @@ for (const id of ids) {
   if (miss) continue; // count 0
   const spares = (dupes.nums[code] || []).filter((n) => n === num).length;
   collection[id] = 1 + spares;
+}
+
+// Guard against silent drift: every id must be either covered by the reports
+// or explicitly listed in OWNED_EXTRAS. A new special/promo code would
+// otherwise vanish from the seeded collection with no warning.
+if (unknown.length > 0) {
+  console.error(
+    `Refusing to write: ${unknown.length} id(s) are neither in the reports nor ` +
+      `OWNED_EXTRAS — add them to OWNED_EXTRAS/NAME_OVERRIDES:\n  ${unknown.join(', ')}`
+  );
+  process.exit(1);
 }
 
 // ── Write outputs ───────────────────────────────────────────────────────

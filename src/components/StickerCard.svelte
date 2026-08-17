@@ -5,9 +5,12 @@
   export let state;          // 'have' | 'spare' | 'miss'
   export let badge = null;   // optional top-right badge text (spares / staged qty)
   export let staged = false; // in the swap staging area → diagonal stripes
+  export let label = null;   // accessible name override (falls back to name/id)
+
+  $: name = sticker.name || 'Sticker ' + sticker.id;
 </script>
 
-<button class="cell {state}" class:staged on:click title={sticker.name || 'Sticker ' + sticker.id}>
+<button class="cell {state}" class:staged on:click title={name} aria-label={label || name}>
   {#if sticker.set === 'Special' || !codeOf(sticker.id)}
     <span class="cid">{sticker.id}</span>
     {#if badge}<span class="dupe">{badge}</span>{/if}

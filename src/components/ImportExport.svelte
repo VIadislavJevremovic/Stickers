@@ -1,6 +1,6 @@
 <script>
   import { get } from 'svelte/store';
-  import { collection, exportData, parseImport } from '../lib/stores.js';
+  import { collection, exportData, parseImport, cancelSession } from '../lib/stores.js';
 
   let open = false;
   let fileInput;
@@ -31,6 +31,7 @@
       alert(result.error); // menu is already closed, so surface via alert
     } else if (confirm('Replace your current collection with the imported one?')) {
       collection.set(result.collection);
+      cancelSession(); // a fresh collection invalidates any in-progress swap
     }
   }
 </script>

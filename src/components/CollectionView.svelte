@@ -160,6 +160,7 @@
             state={stateClass(s.count)}
             badge={s.count >= 2 ? '+' + (s.count - 1) : null}
             staged={stagedIds.has(s.id)}
+            label={(s.name || 'Sticker ' + s.id) + (stagedIds.has(s.id) ? ' — in swap' : '')}
             on:click={() => (openId = s.id)}
           />
         {/each}

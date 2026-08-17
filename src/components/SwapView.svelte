@@ -40,8 +40,7 @@
       {#each $history.slice(0, 8) as h}
         <li class="card">
           <div class="histtop">
-            <strong>{h.partner || 'Someone'}</strong>
-            <span class="muted">{new Date(h.when).toLocaleDateString()}</span>
+            <strong>{new Date(h.when).toLocaleDateString()}</strong>
           </div>
           <div class="histbody">
             <span class="give">gave {Object.values(h.gave).reduce((a, b) => a + b, 0)}</span>
@@ -70,6 +69,7 @@
             sticker={stickerOf(id)}
             state={stateClass($collection[id] || 0)}
             badge={qty > 1 ? '×' + qty : null}
+            label={'Remove ' + id + ' from giving'}
             on:click={() => unstage('outgoing', id)}
           />
         {/each}
@@ -88,6 +88,7 @@
             sticker={stickerOf(id)}
             state={stateClass($collection[id] || 0)}
             badge={qty > 1 ? '×' + qty : null}
+            label={'Remove ' + id + ' from getting'}
             on:click={() => unstage('incoming', id)}
           />
         {/each}
