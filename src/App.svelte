@@ -10,10 +10,9 @@
   let loadError = '';
   const canPersist = storageWorks();
 
-  // Badge on the Swap tab when a session is live.
-  $: swapCount =
-    Object.values($session.outgoing).reduce((a, b) => a + b, 0) +
-    Object.values($session.incoming).reduce((a, b) => a + b, 0);
+  // Per-side counts shown as coloured circles on the Swap tab.
+  $: giveTotal = Object.values($session.outgoing).reduce((a, b) => a + b, 0);
+  $: getTotal = Object.values($session.incoming).reduce((a, b) => a + b, 0);
 
   onMount(async () => {
     try {
@@ -49,9 +48,8 @@
   </button>
   <button class:active={tab === 'swap'} on:click={() => (tab = 'swap')}>
     Swap
-    {#if $session.active || swapCount > 0}
-      <span class="tabbadge">{swapCount}</span>
-    {/if}
+    {#if giveTotal > 0}<span class="tabbadge give">{giveTotal}</span>{/if}
+    {#if getTotal > 0}<span class="tabbadge get">{getTotal}</span>{/if}
   </button>
 </nav>
 
@@ -94,9 +92,12 @@
   }
   .tabs button.active { color: var(--ink); border-color: var(--have); box-shadow: inset 0 -2px 0 var(--have); }
   .tabbadge {
-    background: var(--give); color: #fff; border-radius: 999px;
-    font-size: 12px; padding: 1px 7px; margin-left: 6px;
+    color: #fff; border-radius: 999px; font-size: 12px; font-weight: 700;
+    min-width: 20px; height: 20px; padding: 0 5px; margin-left: 6px;
+    display: inline-grid; place-items: center; font-variant-numeric: tabular-nums;
   }
+  .tabbadge.give { background: var(--give); }
+  .tabbadge.get { background: var(--get); }
 
   main { max-width: 720px; margin: 0 auto; padding: 12px 16px calc(28px + env(safe-area-inset-bottom)); }
   .muted { color: var(--muted); text-align: center; padding: 28px; }

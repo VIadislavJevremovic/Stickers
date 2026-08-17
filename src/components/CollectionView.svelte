@@ -1,6 +1,8 @@
 <script>
-  import { catalog, collection, adjust, setCount } from '../lib/stores.js';
+  import { catalog, collection, session, adjust, setCount, stage, startSession } from '../lib/stores.js';
   import { tap } from '../lib/haptics.js';
+  import { stateClass, codeOf } from '../lib/sticker.js';
+  import StickerCard from './StickerCard.svelte';
   import { fade, scale } from 'svelte/transition';
 
   let filter = 'all';       // all | missing | have | spares
@@ -86,17 +88,15 @@
   // Live view of the sticker in the open modal.
   $: openItem = openId ? $catalog.find((s) => s.id === openId) : null;
   $: openCount = openId ? ($collection[openId] || 0) : 0;
+  $: outQty = openId ? ($session.outgoing[openId] || 0) : 0; // staged in Giving
+  $: inQty = openId ? ($session.incoming[openId] || 0) : 0;  // staged in Getting
 
-  function stateClass(count) {
-    if (count === 0) return 'miss';
-    if (count >= 2) return 'spare';
-    return 'have';
+  // Stage the open sticker into a swap side, starting a session if needed.
+  function addToSwap(side) {
+    tap();
+    if (!$session.active) startSession();
+    stage(side, openId, +1);
   }
-
-  // Split a sticker id into its team code and number: ALG1 -> ALG / 1,
-  // CC-11 -> CC / 11, FWC7 -> FWC / 7, 00 -> '' / 00.
-  const codeOf = (id) => (String(id).match(/^[A-Z]+/) || [''])[0];
-  const numOf = (id) => String(id).slice(codeOf(id).length).replace(/^-/, '');
 
   function closeModal() {
     openId = null;
@@ -149,22 +149,12 @@
       </header>
       <div class="grid">
         {#each items as s (s.id)}
-          <button
-            class="cell {stateClass(s.count)}"
+          <StickerCard
+            sticker={s}
+            state={stateClass(s.count)}
+            badge={s.count >= 2 ? '+' + (s.count - 1) : null}
             on:click={() => (openId = s.id)}
-            title={s.name || 'Sticker ' + s.id}
-          >
-            {#if s.set === 'Special' || !codeOf(s.id)}
-              <span class="cid">{s.id}</span>
-              {#if s.count >= 2}<span class="dupe">+{s.count - 1}</span>{/if}
-            {:else}
-              <div class="ctop">
-                <span class="ccode">{codeOf(s.id)}</span>
-                {#if s.count >= 2}<span class="dupe">+{s.count - 1}</span>{/if}
-              </div>
-              <span class="cnum">{numOf(s.id)}</span>
-            {/if}
-          </button>
+          />
         {/each}
       </div>
     </section>
@@ -212,6 +202,16 @@
         <span class="n">{openCount}</span>
         <button on:click={() => { tap(); adjust(openItem.id, +1); }} aria-label="Add one">+</button>
       </div>
+
+      {#if openCount === 0}
+        <button class="swapbtn get" on:click={() => addToSwap('incoming')}>
+          Add to Getting{#if inQty} · {inQty} staged{/if}
+        </button>
+      {:else if openCount >= 2}
+        <button class="swapbtn give" on:click={() => addToSwap('outgoing')} disabled={outQty >= openCount - 1}>
+          Add to Giving{#if outQty} · {outQty} staged{/if}
+        </button>
+      {/if}
     </div>
   </div>
   {/key}
@@ -255,35 +255,6 @@
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
     gap: 8px;
-  }
-  /* Portrait sticker boxes (w < h). */
-  .cell {
-    position: relative;
-    aspect-ratio: 3 / 4;
-    display: grid; place-items: center;
-    border-radius: 10px; border: 1px solid var(--border);
-    background: var(--surface); color: var(--ink);
-    padding: 2px;
-  }
-  .cid { font-weight: 700; font-size: 14px; font-variant-numeric: tabular-nums; }
-  .ctop {
-    position: absolute; top: 4px; left: 6px; right: 6px;
-    display: flex; align-items: center; justify-content: space-between; gap: 4px;
-  }
-  .ccode { font-size: 10px; font-weight: 700; letter-spacing: 0.02em; opacity: 0.8; }
-  .ctop .dupe { position: static; }
-  .cnum { font-size: 21px; font-weight: 700; font-variant-numeric: tabular-nums; }
-  .cell.have { background: var(--have); border-color: var(--have); color: #fff; }
-  .cell.spare { background: var(--spare); border-color: var(--spare); color: #fff; }
-  .cell.miss { background: var(--surface-2); border: 1px dashed var(--miss); color: var(--miss); }
-  .dupe {
-    position: absolute; top: 3px; right: 3px;
-    font-size: 10px; font-weight: 700; line-height: 1;
-    padding: 2px 4px; border-radius: 6px;
-    background: rgba(0, 0, 0, 0.28); color: #fff;
-  }
-  @media (prefers-reduced-motion: no-preference) {
-    .cell:active { transform: scale(0.95); }
   }
 
   .empty { color: var(--muted); text-align: center; padding: 28px; }
@@ -335,4 +306,12 @@
   .stepper.big { display: inline-flex; }
   .stepper.big button { width: 56px; height: 50px; font-size: 24px; }
   .stepper.big .n { min-width: 52px; font-size: 20px; }
+
+  .swapbtn {
+    display: block; width: 100%; margin-top: 14px; padding: 11px;
+    border: 1px solid; border-radius: 10px; background: transparent; font-weight: 600;
+  }
+  .swapbtn.get { color: var(--get); border-color: var(--get); }
+  .swapbtn.give { color: var(--give); border-color: var(--give); }
+  .swapbtn:disabled { opacity: 0.45; }
 </style>

@@ -1,83 +1,38 @@
 <script>
   import {
     catalog, collection, session, history,
-    startSession, setPartner, stage, commitSession, cancelSession,
+    startSession, stage, commitSession, cancelSession,
   } from '../lib/stores.js';
-  import AddPicker from './AddPicker.svelte';
   import { tap } from '../lib/haptics.js';
+  import { stateClass } from '../lib/sticker.js';
+  import StickerCard from './StickerCard.svelte';
 
-  let picker = null; // 'give' | 'get' | null
-  let partnerInput = '';
-
-  const nameOf = (id) => {
-    const s = $catalog.find((x) => String(x.id) === String(id));
-    return s ? (s.name || 'Sticker ' + s.id) : 'Sticker ' + id;
-  };
+  const stickerOf = (id) => $catalog.find((x) => String(x.id) === String(id)) || { id };
 
   // Totals for the balance ledger.
   $: giveTotal = Object.values($session.outgoing).reduce((a, b) => a + b, 0);
   $: getTotal = Object.values($session.incoming).reduce((a, b) => a + b, 0);
-  $: diff = getTotal - giveTotal; // + means you're receiving more
-
-  // Give options: only spares (count - 1). The album copy stays put, so a
-  // sticker you own just one of isn't offered. Most spares first.
-  $: giveOptions = $catalog
-    .map((s) => ({ ...s, count: $collection[s.id] || 0 }))
-    .filter((s) => s.count >= 2)
-    .sort((a, b) => (b.count - a.count) || String(a.id).localeCompare(String(b.id)))
-    .map((s) => {
-      const spare = s.count - 1;
-      const staged = $session.outgoing[s.id] || 0;
-      return {
-        id: s.id,
-        name: s.name,
-        note: `${spare} spare${spare === 1 ? '' : 's'}`,
-        disabled: staged >= spare,
-      };
-    });
-
-  // Get options: any catalog sticker; note whether it fills a miss.
-  $: getOptions = $catalog.map((s) => {
-    const owned = $collection[s.id] || 0;
-    return {
-      id: s.id,
-      name: s.name,
-      note: owned === 0 ? 'fills a miss' : `you have ${owned}`,
-    };
-  });
-
-  function pick(side, id) {
-    stage(side, id, +1);
-  }
 
   function begin() {
-    startSession(partnerInput.trim());
-    partnerInput = '';
+    startSession();
+  }
+
+  // Tap a staged card to take one copy back off that side.
+  function unstage(side, id) {
+    tap();
+    stage(side, id, -1);
   }
 
   function doCommit() {
     if (confirm('Apply this swap to your collection?')) commitSession();
   }
   function doCancel() {
-    if (confirm('Discard this swap? Your collection stays unchanged.')) {
-      cancelSession();
-      picker = null;
-    }
+    if (confirm('Discard this swap? Your collection stays unchanged.')) cancelSession();
   }
 </script>
 
 {#if !$session.active}
-  <div class="start card">
-    <h2>Start a swap</h2>
-    <p class="muted">
-      Nothing you stage here touches your collection until you commit — so a
-      trade that falls through leaves your counts untouched.
-    </p>
-    <div class="startrow">
-      <input placeholder="Who are you trading with? (optional)" bind:value={partnerInput} />
-      <button class="primary" on:click={begin}>Start</button>
-    </div>
-  </div>
+  <button class="primary start" on:click={begin}>Start a swap</button>
 
   {#if $history.length}
     <h3 class="histhead">Recent swaps</h3>
@@ -97,128 +52,86 @@
     </ul>
   {/if}
 {:else}
-  <!-- Live session -->
-  <div class="partner card">
-    <label for="partner-name">Trading with</label>
-    <input id="partner-name" value={$session.partner} on:input={(e) => setPartner(e.target.value)} placeholder="name / label" />
-  </div>
-
-  <!-- Balance ledger — the running tally that nudges you to equalize -->
-  <div class="ledger card" class:even={diff === 0} class:off={diff !== 0}>
+  <!-- Balance ledger — the running tally of each side. -->
+  <div class="ledger card">
     <div class="col"><span class="give">{giveTotal}</span><small>giving</small></div>
     <div class="arrows">⇄</div>
     <div class="col"><span class="get">{getTotal}</span><small>getting</small></div>
-    <div class="verdict">
-      {#if diff === 0 && giveTotal === 0}Add stickers to each side
-      {:else if diff === 0}Even trade
-      {:else if diff > 0}They owe {diff} — or add {diff} to your give
-      {:else}You owe {-diff} — add {-diff} to your get{/if}
-    </div>
   </div>
 
-  <div class="cols">
-    <!-- GIVING -->
-    <section>
-      <div class="sechead give">
-        <h3>Giving</h3>
-        <button on:click={() => (picker = picker === 'give' ? null : 'give')}>+ Add</button>
-      </div>
-      {#if picker === 'give'}
-        <AddPicker title="Give a sticker" options={giveOptions}
-          on:pick={(e) => pick('outgoing', e.detail)} on:close={() => (picker = null)} />
-      {/if}
-      {#if Object.keys($session.outgoing).length === 0}
-        <p class="empty">Pick spares to hand over.</p>
-      {:else}
+  <section>
+    <h3 class="give">Giving <span class="hint">tap to remove</span></h3>
+    {#if giveTotal === 0}
+      <p class="empty">Add spares from a sticker in the Collection tab.</p>
+    {:else}
+      <div class="grid">
         {#each Object.entries($session.outgoing) as [id, qty] (id)}
-          <div class="line card">
-            <span class="lid">{id}</span>
-            <span class="lname">{nameOf(id)}</span>
-            <div class="stepper">
-              <button on:click={() => { tap(); stage('outgoing', id, -1); }} aria-label="Give one less">−</button>
-              <span class="n">{qty}</span>
-              <button on:click={() => { tap(); stage('outgoing', id, +1); }}
-                disabled={qty >= (($collection[id] || 0) - 1)} aria-label="Give one more">+</button>
-            </div>
-          </div>
+          <StickerCard
+            sticker={stickerOf(id)}
+            state={stateClass($collection[id] || 0)}
+            badge={qty > 1 ? '×' + qty : null}
+            on:click={() => unstage('outgoing', id)}
+          />
         {/each}
-      {/if}
-    </section>
-
-    <!-- GETTING -->
-    <section>
-      <div class="sechead get">
-        <h3>Getting</h3>
-        <button on:click={() => (picker = picker === 'get' ? null : 'get')}>+ Add</button>
       </div>
-      {#if picker === 'get'}
-        <AddPicker title="Receive a sticker" options={getOptions}
-          on:pick={(e) => pick('incoming', e.detail)} on:close={() => (picker = null)} />
-      {/if}
-      {#if Object.keys($session.incoming).length === 0}
-        <p class="empty">Add whatever you receive.</p>
-      {:else}
+    {/if}
+  </section>
+
+  <section>
+    <h3 class="get">Getting <span class="hint">tap to remove</span></h3>
+    {#if getTotal === 0}
+      <p class="empty">Add missing ones from the Collection tab.</p>
+    {:else}
+      <div class="grid">
         {#each Object.entries($session.incoming) as [id, qty] (id)}
-          <div class="line card">
-            <span class="lid" class:fills={!($collection[id] > 0)}>{id}</span>
-            <span class="lname">{nameOf(id)}</span>
-            <div class="stepper">
-              <button on:click={() => { tap(); stage('incoming', id, -1); }} aria-label="Get one less">−</button>
-              <span class="n">{qty}</span>
-              <button on:click={() => { tap(); stage('incoming', id, +1); }} aria-label="Get one more">+</button>
-            </div>
-          </div>
+          <StickerCard
+            sticker={stickerOf(id)}
+            state={stateClass($collection[id] || 0)}
+            badge={qty > 1 ? '×' + qty : null}
+            on:click={() => unstage('incoming', id)}
+          />
         {/each}
-      {/if}
-    </section>
-  </div>
+      </div>
+    {/if}
+  </section>
 
   <div class="actions">
     <button class="ghost" on:click={doCancel}>Cancel</button>
     <button class="primary" on:click={doCommit}
-      disabled={giveTotal === 0 && getTotal === 0}>Commit swap</button>
+      disabled={giveTotal === 0 && getTotal === 0}>Commit</button>
   </div>
 {/if}
 
 <style>
-  h2 { font-size: 18px; margin: 0 0 6px; }
   .muted { color: var(--muted); font-size: 14px; }
-  .start { padding: 16px; }
-  .startrow { display: flex; gap: 8px; margin-top: 12px; }
-  .startrow input { flex: 1; padding: 11px 13px; border: 1px solid var(--border); border-radius: 10px; }
 
   .primary { background: var(--have); color: #fff; border: 0; padding: 11px 18px; border-radius: 10px; font-weight: 600; }
   .primary:disabled { opacity: 0.45; }
   .ghost { background: var(--surface); color: var(--muted); border: 1px solid var(--border); padding: 11px 18px; border-radius: 10px; font-weight: 600; }
 
-  .partner { padding: 12px; margin-bottom: 12px; }
-  .partner label { display: block; font-size: 12px; color: var(--muted); margin-bottom: 4px; }
-  .partner input { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 10px; }
+  .start { display: block; width: 100%; padding: 13px; font-size: 15px; }
 
   .ledger {
     display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
-    gap: 6px; padding: 14px; margin-bottom: 14px; text-align: center;
+    gap: 6px; padding: 14px; margin-bottom: 16px; text-align: center;
   }
   .ledger .col span { font-size: 26px; font-weight: 700; font-variant-numeric: tabular-nums; display: block; }
   .ledger .col small { color: var(--muted); font-size: 12px; }
   .ledger .give { color: var(--give); }
   .ledger .get { color: var(--get); }
   .ledger .arrows { font-size: 20px; color: var(--muted); }
-  .ledger .verdict { grid-column: 1 / -1; font-size: 13px; font-weight: 600; padding-top: 8px; border-top: 1px solid var(--border); margin-top: 4px; }
-  .ledger.even .verdict { color: var(--have); }
-  .ledger.off .verdict { color: var(--give); }
 
-  .cols { display: flex; flex-direction: column; gap: 18px; }
-  .sechead { display: flex; align-items: center; justify-content: space-between; margin-bottom: 8px; }
-  .sechead h3 { margin: 0; font-size: 15px; }
-  .sechead.give h3 { color: var(--give); }
-  .sechead.get h3 { color: var(--get); }
-  .sechead button { border: 1px solid var(--border); background: var(--surface); border-radius: 9px; padding: 6px 12px; font-weight: 600; font-size: 13px; }
+  section { margin-bottom: 18px; }
+  section h3 { margin: 0 0 8px; font-size: 15px; display: flex; align-items: baseline; gap: 8px; }
+  section h3.give { color: var(--give); }
+  section h3.get { color: var(--get); }
+  .hint { font-size: 12px; font-weight: 400; color: var(--muted); }
 
-  .line { display: flex; align-items: center; gap: 10px; padding: 8px 10px; margin-bottom: 6px; }
-  .lid { font-weight: 700; font-variant-numeric: tabular-nums; min-width: 36px; text-align: center; }
-  .lid.fills { color: var(--miss); }
-  .lname { flex: 1; }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
+    gap: 8px;
+  }
   .empty { color: var(--muted); font-size: 14px; padding: 6px 2px 10px; }
 
   .actions { display: flex; gap: 10px; margin-top: 20px; }
@@ -232,9 +145,4 @@
   .histbody { display: flex; gap: 14px; margin-top: 2px; font-size: 13px; font-weight: 600; }
   .histbody .give { color: var(--give); }
   .histbody .get { color: var(--get); }
-
-  @media (min-width: 560px) {
-    .cols { flex-direction: row; }
-    .cols section { flex: 1; }
-  }
 </style>
