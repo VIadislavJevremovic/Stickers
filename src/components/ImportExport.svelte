@@ -5,16 +5,43 @@
   let open = false;
   let fileInput;
 
+  // stickers-2026-08-17-1423.json — date + HHmm so repeated same-day
+  // backups don't overwrite each other.
+  function backupName() {
+    const d = new Date();
+    const p = (n) => String(n).padStart(2, '0');
+    const stamp = `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}-${p(d.getHours())}${p(d.getMinutes())}`;
+    return `stickers-${stamp}.json`;
+  }
+
+  // Fallback: the classic anchor-download. Reliable on desktop, but janky in a
+  // standalone iOS PWA (often opens a viewer instead of saving), so it's only
+  // used when the native share sheet isn't available.
   function download() {
     const data = exportData(get(collection));
     const blob = new Blob([data], { type: 'application/json' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `stickers-${new Date().toISOString().slice(0, 10)}.json`;
+    a.download = backupName();
     a.click();
     URL.revokeObjectURL(url);
-    open = false; // dismiss the Backup menu after exporting
+  }
+
+  async function exportBackup() {
+    open = false; // dismiss the Backup menu whichever path we take
+    const file = new File([exportData(get(collection))], backupName(), { type: 'application/json' });
+    // Hand the file to the OS share sheet when we can — this is the reliable
+    // path in an installed PWA. Fall back to a plain download otherwise.
+    if (navigator.canShare?.({ files: [file] })) {
+      try {
+        await navigator.share({ files: [file] });
+      } catch (_) {
+        /* user cancelled the share sheet — nothing to do */
+      }
+    } else {
+      download();
+    }
   }
 
   function startImport() {
@@ -40,7 +67,7 @@
   <button class="trigger" on:click={() => (open = !open)} aria-expanded={open}>Backup</button>
   {#if open}
     <div class="menu card">
-      <button on:click={download}>Export to file</button>
+      <button on:click={exportBackup}>Export to file</button>
       <button on:click={startImport}>Import from file</button>
     </div>
   {/if}
