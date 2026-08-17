@@ -1,6 +1,6 @@
 <script>
   import { onMount } from 'svelte';
-  import { catalog, loadCatalog, session } from './lib/stores.js';
+  import { catalog, loadCatalog, giveTotal, getTotal } from './lib/stores.js';
   import { storageWorks } from './lib/persist.js';
   import CollectionView from './components/CollectionView.svelte';
   import SwapView from './components/SwapView.svelte';
@@ -10,9 +10,6 @@
   let loadError = '';
   const canPersist = storageWorks();
 
-  // Per-side counts shown as coloured circles on the Swap tab.
-  $: giveTotal = Object.values($session.outgoing).reduce((a, b) => a + b, 0);
-  $: getTotal = Object.values($session.incoming).reduce((a, b) => a + b, 0);
 
   onMount(async () => {
     try {
@@ -48,8 +45,8 @@
   </button>
   <button class:active={tab === 'swap'} on:click={() => (tab = 'swap')}>
     Swap
-    {#if giveTotal > 0}<span class="tabbadge give">{giveTotal}<span class="sr-only"> giving</span></span>{/if}
-    {#if getTotal > 0}<span class="tabbadge get">{getTotal}<span class="sr-only"> getting</span></span>{/if}
+    {#if $giveTotal > 0}<span class="tabbadge give">{$giveTotal}<span class="sr-only"> giving</span></span>{/if}
+    {#if $getTotal > 0}<span class="tabbadge get">{$getTotal}<span class="sr-only"> getting</span></span>{/if}
   </button>
 </nav>
 

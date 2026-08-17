@@ -259,12 +259,6 @@
   .sethead h2 { font-size: 15px; margin: 0; letter-spacing: -0.01em; }
   .setcount { font-size: 13px; color: var(--muted); font-variant-numeric: tabular-nums; }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
-    gap: 8px;
-  }
-
   .empty { color: var(--muted); text-align: center; padding: 28px; }
 
   /* ── Detail modal ── */

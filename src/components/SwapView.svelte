@@ -1,6 +1,6 @@
 <script>
   import {
-    catalog, collection, session, history,
+    catalog, collection, session, history, sum, giveTotal, getTotal,
     startSession, stage, commitSession, cancelSession,
   } from '../lib/stores.js';
   import { tap } from '../lib/haptics.js';
@@ -8,10 +8,6 @@
   import StickerCard from './StickerCard.svelte';
 
   const stickerOf = (id) => $catalog.find((x) => String(x.id) === String(id)) || { id };
-
-  // Totals for the balance ledger.
-  $: giveTotal = Object.values($session.outgoing).reduce((a, b) => a + b, 0);
-  $: getTotal = Object.values($session.incoming).reduce((a, b) => a + b, 0);
 
   function begin() {
     startSession();
@@ -43,8 +39,8 @@
             <strong>{new Date(h.when).toLocaleDateString()}</strong>
           </div>
           <div class="histbody">
-            <span class="give">gave {Object.values(h.gave).reduce((a, b) => a + b, 0)}</span>
-            <span class="get">got {Object.values(h.got).reduce((a, b) => a + b, 0)}</span>
+            <span class="give">gave {sum(h.gave)}</span>
+            <span class="get">got {sum(h.got)}</span>
           </div>
         </li>
       {/each}
@@ -53,14 +49,14 @@
 {:else}
   <!-- Balance ledger — the running tally of each side. -->
   <div class="ledger card">
-    <div class="col"><span class="give">{giveTotal}</span><small>giving</small></div>
+    <div class="col"><span class="give">{$giveTotal}</span><small>giving</small></div>
     <div class="arrows">⇄</div>
-    <div class="col"><span class="get">{getTotal}</span><small>getting</small></div>
+    <div class="col"><span class="get">{$getTotal}</span><small>getting</small></div>
   </div>
 
   <section>
     <h3 class="give">Giving <span class="hint">tap to remove</span></h3>
-    {#if giveTotal === 0}
+    {#if $giveTotal === 0}
       <p class="empty">Add spares from a sticker in the Collection tab.</p>
     {:else}
       <div class="grid">
@@ -79,7 +75,7 @@
 
   <section>
     <h3 class="get">Getting <span class="hint">tap to remove</span></h3>
-    {#if getTotal === 0}
+    {#if $getTotal === 0}
       <p class="empty">Add missing ones from the Collection tab.</p>
     {:else}
       <div class="grid">
@@ -99,13 +95,11 @@
   <div class="actions">
     <button class="ghost" on:click={doCancel}>Cancel</button>
     <button class="primary" on:click={doCommit}
-      disabled={giveTotal === 0 && getTotal === 0}>Commit</button>
+      disabled={$giveTotal === 0 && $getTotal === 0}>Commit</button>
   </div>
 {/if}
 
 <style>
-  .muted { color: var(--muted); font-size: 14px; }
-
   .primary { background: var(--have); color: #fff; border: 0; padding: 11px 18px; border-radius: 10px; font-weight: 600; }
   .primary:disabled { opacity: 0.45; }
   .ghost { background: var(--surface); color: var(--muted); border: 1px solid var(--border); padding: 11px 18px; border-radius: 10px; font-weight: 600; }
@@ -128,11 +122,6 @@
   section h3.get { color: var(--get); }
   .hint { font-size: 12px; font-weight: 400; color: var(--muted); }
 
-  .grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(58px, 1fr));
-    gap: 8px;
-  }
   .empty { color: var(--muted); font-size: 14px; padding: 6px 2px 10px; }
 
   .actions { display: flex; gap: 10px; margin-top: 20px; }

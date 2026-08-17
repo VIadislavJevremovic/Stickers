@@ -1,5 +1,8 @@
-import { writable, get } from 'svelte/store';
+import { writable, derived, get } from 'svelte/store';
 import { persisted } from './persist.js';
+
+// Sum the quantities in a { id: qty } bag.
+export const sum = (bag) => Object.values(bag).reduce((a, b) => a + b, 0);
 
 // ── Reference data ──────────────────────────────────────────────────────
 // The fixed set of stickers. Loaded from public/catalog.json at startup.
@@ -60,6 +63,10 @@ const emptySession = () => ({
 });
 
 export const session = persisted('stickers.session.v1', emptySession());
+
+// Running totals for each side of the live swap.
+export const giveTotal = derived(session, (s) => sum(s.outgoing));
+export const getTotal = derived(session, (s) => sum(s.incoming));
 
 export function startSession() {
   session.set({ ...emptySession(), active: true, startedAt: Date.now() });

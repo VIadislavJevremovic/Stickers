@@ -7,20 +7,23 @@ Vite, deploys to GitHub Pages, installs to the iOS Home Screen as a PWA.
 
 ## What it does
 
-- **Collection** — every sticker shows as *missing*, *have*, or *spare*, with
-  `+ / −` steppers to tweak any count directly. Filter by state or set, search
-  by number/name. Live counts of have / missing / spares.
-- **Swap** — a staging area for a live trade. Add stickers to **Giving** and
-  **Getting**, watch the running balance, then **Commit** (applies the changes
-  to your collection) or **Cancel** (throws the session away, collection
-  untouched). The session is saved as you go, so closing the app mid-trade
-  doesn't lose it.
-  - Giving only offers your **spares** (`count − 1`): once a sticker is in
-    the album it stays there, so its count never drops below 1.
-  - Getting accepts any sticker; ones that fill a miss are flagged.
+- **Collection** — a grid of sticker cards grouped by set, each showing
+  *missing*, *have*, or *spare*. Tap a card for a detail sheet with a `+ / −`
+  stepper (owned stickers keep their album copy — only spares come off) and a
+  revert button. Filter by state or set, search by number/name, sort by group
+  or A–Z. Live counts of have / missing / spares.
+- **Swap** — a staging area for a live trade. You stage stickers from the
+  Collection: open a sticker and **Add to Giving** (offered for your spares)
+  or **Add to Getting** (offered for missing ones) — at most one per sticker
+  per side. The Swap tab shows both sides as cards (tap one to take it back),
+  the running balance, and per-side counts on the tab itself. **Commit**
+  applies the trade; **Cancel** throws it away, collection untouched. The
+  session is saved as you go, so closing the app mid-trade doesn't lose it.
+  Staged stickers are marked with diagonal stripes in the Collection grid.
 - **Backup** — export your collection to a JSON file and re-import it (to move
   between your own devices, or just as a safety net since `localStorage` isn't
   permanent).
+- **Dark mode** — follows your system appearance automatically.
 
 ## Run locally
 

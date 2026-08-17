@@ -122,11 +122,10 @@ if (unknown.length > 0) {
 // ── Write outputs ───────────────────────────────────────────────────────
 writeFileSync(join(ROOT, 'public/catalog.json'), JSON.stringify(catalog, null, 2) + '\n');
 
-const backup = {
-  schema: 'sticker-tracker/1',
-  exportedAt: new Date().toISOString(),
-  collection,
-};
+// No exportedAt here — keep the generated seed deterministic so re-running
+// only changes the file when the data actually changed. (The app's own
+// exportData() still stamps real user exports.)
+const backup = { schema: 'sticker-tracker/1', collection };
 writeFileSync(join(ROOT, 'data/collection-import.json'), JSON.stringify(backup, null, 2) + '\n');
 
 // ── Report ──────────────────────────────────────────────────────────────
