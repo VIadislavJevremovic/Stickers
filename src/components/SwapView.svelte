@@ -32,7 +32,7 @@
 </script>
 
 {#if !$session.active}
-  <button class="primary start" on:click={begin}>Start a swap</button>
+  <button class="primary start" on:click={begin}>Start</button>
 
   {#if $history.length}
     <h3 class="histhead">Recent swaps</h3>

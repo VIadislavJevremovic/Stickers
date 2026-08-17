@@ -33,6 +33,12 @@
   $: sets = [...new Set($catalog.map((s) => s.set).filter(Boolean))]
     .sort((a, b) => setCmp(a, b, sortMode));
 
+  // Ids currently staged in the swap (either side) — marked in the grid.
+  $: stagedIds = new Set([
+    ...Object.keys($session.outgoing),
+    ...Object.keys($session.incoming),
+  ]);
+
   $: rows = $catalog
     .map((s) => ({ ...s, count: $collection[s.id] || 0 }))
     .filter((s) => (setFilter === 'all' ? true : s.set === setFilter))
@@ -153,6 +159,7 @@
             sticker={s}
             state={stateClass(s.count)}
             badge={s.count >= 2 ? '+' + (s.count - 1) : null}
+            staged={stagedIds.has(s.id)}
             on:click={() => (openId = s.id)}
           />
         {/each}
@@ -204,12 +211,12 @@
       </div>
 
       {#if openCount === 0}
-        <button class="swapbtn get" on:click={() => addToSwap('incoming')}>
-          Add to Getting{#if inQty} · {inQty} staged{/if}
+        <button class="swapbtn get" on:click={() => addToSwap('incoming')} disabled={inQty >= 1}>
+          {inQty >= 1 ? 'In Getting' : 'Add to Getting'}
         </button>
       {:else if openCount >= 2}
-        <button class="swapbtn give" on:click={() => addToSwap('outgoing')} disabled={outQty >= openCount - 1}>
-          Add to Giving{#if outQty} · {outQty} staged{/if}
+        <button class="swapbtn give" on:click={() => addToSwap('outgoing')} disabled={outQty >= 1}>
+          {outQty >= 1 ? 'In Giving' : 'Add to Giving'}
         </button>
       {/if}
     </div>

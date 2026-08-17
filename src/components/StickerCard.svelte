@@ -4,9 +4,10 @@
   export let sticker;        // { id, set?, name? }
   export let state;          // 'have' | 'spare' | 'miss'
   export let badge = null;   // optional top-right badge text (spares / staged qty)
+  export let staged = false; // in the swap staging area → diagonal stripes
 </script>
 
-<button class="cell {state}" on:click title={sticker.name || 'Sticker ' + sticker.id}>
+<button class="cell {state}" class:staged on:click title={sticker.name || 'Sticker ' + sticker.id}>
   {#if sticker.set === 'Special' || !codeOf(sticker.id)}
     <span class="cid">{sticker.id}</span>
     {#if badge}<span class="dupe">{badge}</span>{/if}
@@ -46,6 +47,21 @@
     background: rgba(0, 0, 0, 0.28); color: #fff;
   }
   .ctop .dupe { position: static; }
+
+  /* Diagonal stripes marking a sticker that's staged in a swap. */
+  .cell.staged::after {
+    content: '';
+    position: absolute; inset: 0; border-radius: inherit; pointer-events: none;
+    background: repeating-linear-gradient(
+      45deg, transparent 0 5px, rgba(255, 255, 255, 0.16) 5px 10px
+    );
+  }
+  .cell.staged.miss::after {
+    background: repeating-linear-gradient(
+      45deg, transparent 0 5px, rgba(128, 128, 128, 0.2) 5px 10px
+    );
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     .cell:active { transform: scale(0.95); }
   }
