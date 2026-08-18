@@ -8,17 +8,28 @@
   let filter = 'all';       // all | missing | have | spares
   let query = '';
   let setFilter = 'all';
-  let sortMode = 'group';   // group (catalog order) | alpha (A–Z)
+  let sortMode = 'alpha';   // alpha (A–Z by country code) | group (catalog order)
   let openId = null;        // sticker whose detail modal is open
 
-  // In alphabetical mode these sets stay pinned to the top, in this order.
+  // These sets stay pinned to the top in this order, in both sort modes.
   const PINNED_SETS = ['Special', 'FIFA World Cup', 'Coca-Cola'];
 
-  // Order two set names per the given mode: catalog order (0 = keep as-is)
-  // or A–Z with the pinned sets held on top. `mode` is passed in (rather
-  // than read from the closure) so reactive statements track it as a dep.
-  function setCmp(a, b, mode) {
-    if (mode !== 'alpha') return 0;
+  // Set name → country code (e.g. "Mexico" → "MEX"), used to sort A–Z by
+  // code rather than by full country name.
+  $: setCode = (() => {
+    const m = new Map();
+    for (const s of $catalog) {
+      const key = s.set || 'Other';
+      if (!m.has(key)) m.set(key, codeOf(s.id));
+    }
+    return m;
+  })();
+
+  // Order two set names: pinned sets always lead (in PINNED_SETS order), then
+  // alpha mode sorts the rest by country code and group mode keeps catalog
+  // order (0). `mode`/`codes` are passed in (rather than read from the
+  // closure) so reactive statements track them as deps.
+  function setCmp(a, b, mode, codes) {
     const ai = PINNED_SETS.indexOf(a);
     const bi = PINNED_SETS.indexOf(b);
     if (ai !== -1 || bi !== -1) {
@@ -26,12 +37,13 @@
       if (bi === -1) return -1;
       return ai - bi;
     }
-    return a.localeCompare(b);
+    if (mode !== 'alpha') return 0;
+    return (codes.get(a) || '').localeCompare(codes.get(b) || '');
   }
 
   // Sets for the filter dropdown, ordered to match the section order.
   $: sets = [...new Set($catalog.map((s) => s.set).filter(Boolean))]
-    .sort((a, b) => setCmp(a, b, sortMode));
+    .sort((a, b) => setCmp(a, b, sortMode, setCode));
 
   // Ids currently staged in the swap (either side) — marked in the grid.
   $: stagedIds = new Set([
@@ -57,8 +69,9 @@
       );
     });
 
-  // Group the visible rows by set. Default order is catalog order; alpha
-  // mode sorts sets A–Z but keeps the pinned sets (Special, FWC) on top.
+  // Group the visible rows by set. Pinned sets (Special, FWC, Coca-Cola) lead
+  // in both modes; alpha then sorts the rest by country code, group keeps
+  // catalog order.
   $: groups = (() => {
     const m = new Map();
     for (const s of rows) {
@@ -67,7 +80,7 @@
       m.get(key).push(s);
     }
     const entries = [...m]; // [ [setName, items[]], ... ]
-    entries.sort((a, b) => setCmp(a[0], b[0], sortMode));
+    entries.sort((a, b) => setCmp(a[0], b[0], sortMode, setCode));
     return entries;
   })();
 
@@ -132,8 +145,8 @@
   </div>
   {#if sets.length}
     <select bind:value={sortMode} aria-label="Sort order">
-      <option value="group">Sort by group</option>
       <option value="alpha">Sort A–Z</option>
+      <option value="group">Sort by group</option>
     </select>
     <select bind:value={setFilter} aria-label="Filter by set">
       <option value="all">All sets</option>
